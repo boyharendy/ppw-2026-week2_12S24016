@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio resmi dan layanan interaktif accessible Boy Harendy Simamora - Mahasiswa S1 Sistem Informasi Institut Teknologi Del. Dibangun dengan HTML5 Semantik murni dan CSS3 Modern sesuai standar WCAG 2.2 AA.">
+  <meta name="keywords" content="Portofolio Web, Boy Harendy Simamora, Mahasiswa Sistem Informasi, Institut Teknologi Del, PPW 2026, HTML5 Semantik, CSS3, Aksesibilitas Web, WCAG 2.2 AA">
+  <meta name="author" content="Boy Harendy Simamora">
+  <title>Boy Harendy Simamora | Portofolio &amp; Layanan Web Accessible</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans untuk Tipografi Modern & Bersih -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet Eksternal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- Aksesibilitas: Tautan Langsung Lewati ke Konten Utama (WCAG 2.2 AA) -->
+  <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+
+  <!-- ================================================================= -->
+  <!-- HEADER & NAVIGASI UTAMA (STICKY)                                   -->
+  <!-- ================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-logo" aria-label="Beranda Portofolio Boy Harendy Simamora">
+        <span class="logo-symbol" aria-hidden="true">&lt;/&gt;</span>
+        <span class="logo-text">Boy<strong>Harendy</strong></span>
+      </a>
+
+      <!-- Navigasi Landmark Semantik -->
+      <nav class="site-nav" aria-label="Navigasi Utama Situs">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#tentang" class="nav-link">Tentang Saya</a></li>
+          <li class="nav-item"><a href="#portofolio" class="nav-link">Portofolio</a></li>
+          <li class="nav-item"><a href="#riwayat" class="nav-link">Riwayat Akademik</a></li>
+          <li class="nav-item"><a href="#layanan" class="nav-link">Layanan &amp; Kontak</a></li>
+          <li class="nav-item"><a href="#aside-info" class="nav-link">Status</a></li>
+        </ul>
+      </nav>
+
+      <!-- Tombol CTA Navigasi -->
+      <a href="#layanan" class="btn btn-primary nav-cta">Hubungi Saya</a>
+    </div>
+  </header>
+
+  <!-- ================================================================= -->
+  <!-- KONTEN UTAMA (MAIN LANDMARK)                                      -->
+  <!-- ================================================================= -->
+  <main id="main-content">
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- SECTION 1: TENTANG SAYA (HERO & BIO AKADEMIK)                   -->
+    <!-- --------------------------------------------------------------- -->
+    <section id="tentang" class="section-hero" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        
+        <!-- Kolom Kiri: Profil & Keterangan -->
+        <div class="hero-content">
+          <div class="badge-status-pill">
+            <span class="status-indicator" aria-hidden="true"></span>
+            <span>Mahasiswa Aktif S1 Sistem Informasi &bull; Terbuka untuk Kolaborasi</span>
+          </div>
+
+          <!-- Single H1 per Page (SEO & Document Outline) -->
+          <h1 id="hero-title" class="hero-title">
+            Halo, saya <span class="text-accent">Boy Harendy Simamora</span>
+          </h1>
+
+          <p class="hero-role">
+            Mahasiswa Sistem Informasi &bull; Spesialisasi <em>Full-Stack Web, Data Analytics &amp; Accessible UI</em>
+          </p>
+
+          <p class="hero-bio">
+            Saya mahasiswa Program Studi Sistem Informasi di <strong>Institut Teknologi Del</strong> dengan ketertarikan mendalam pada pengembangan web modern, arsitektur <em>backend</em>, analisis data, dan kecerdasan buatan. Berdedikasi merancang antarmuka pengguna yang responsif, berkinerja tinggi, dan patuh pada standar aksesibilitas digital <strong>WCAG 2.2 Level AA</strong> dengan arsitektur kode semantik yang bersih, rapi, dan mudah dirawat.
+          </p>
+
+          <!-- Aksi Utama (CTA) -->
+          <div class="hero-actions">
+            <a href="#layanan" class="btn btn-primary">Ajukan Konsultasi Proyek</a>
+            <a href="#portofolio" class="btn btn-secondary">Lihat Hasil Karya</a>
+          </div>
+
+          <!-- List Terstruktur 1: Keahlian Utama (Unordered List) -->
+          <div class="competencies-card">
+            <h2 class="competencies-title">Kompetensi Inti &amp; Teknologi Unggulan:</h2>
+            <ul class="skills-list" aria-label="Daftar keahlian dan kompetensi teknis">
+              <li><strong>Front-End &amp; Frameworks:</strong> React.js, Next.js, JavaScript (ES6+), TypeScript, Tailwind CSS, HTML5 Semantik, dan CSS3 Modern.</li>
+              <li><strong>Back-End &amp; Bahasa Pemrograman:</strong> Java, C, Python, Dart/Flutter, arsitektur Serverless, dan perancangan REST API.</li>
+              <li><strong>Basis Data &amp; Layanan Cloud:</strong> MySQL / SQL Relasional, Supabase, Firebase, dan optimasi pemodelan query data.</li>
+              <li><strong>Alat, Kualitas &amp; Standar:</strong> Git Version Control, GitHub Pages / Vercel, Aksesibilitas WCAG 2.2 AA, dan W3C Validation.</li>
+            </ul>
+          </div>
+
+          <!-- List Terstruktur 2: Alur Kerja Proyek (Ordered List) -->
+          <div class="workflow-card">
+            <h2 class="workflow-title">Tahapan Standar Pengerjaan Proyek:</h2>
+            <ol class="workflow-list" aria-label="Tahapan proses pengerjaan proyek dari awal hingga rilis">
+              <li><strong>Analisis Kebutuhan &amp; Pemodelan Sistem:</strong> Mengkaji PRD, spesifikasi bisnis, persona pengguna, dan kriteria aksesibilitas digital.</li>
+              <li><strong>Perancangan Arsitektur &amp; Antarmuka:</strong> Menyusun semantic outline, wireframe responsif mobile-first, dan relasi data terstruktur.</li>
+              <li><strong>Implementasi Kode Semantik Murni:</strong> Menulis HTML5 semantik dan CSS3 modern tanpa ketergantungan framework berlebih.</li>
+              <li><strong>Audit Aksesibilitas &amp; Pengujian Lintas Perangkat:</strong> Verifikasi rasio kontras warna, navigasi keyboard penuh, dan validasi standar W3C.</li>
+              <li><strong>Penerapan &amp; Dokumentasi Komprehensif:</strong> Rilis publik via GitHub Pages / Vercel dilengkapi dokumentasi pemeliharaan yang jelas.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Foto Profil & Kartu Identitas Akademik -->
+        <div class="hero-visual">
+          <figure class="profile-figure">
+            <img src="assets/images/profile.jpg" 
+                 alt="Foto potret Boy Harendy Simamora, mahasiswa S1 Sistem Informasi Institut Teknologi Del" 
+                 class="profile-img" 
+                 width="480" 
+                 height="480">
+            <figcaption class="profile-caption">
+              <strong>Boy Harendy Simamora</strong>
+              <span>NIM: 12S24016 &bull; Institut Teknologi Del</span>
+            </figcaption>
+          </figure>
+
+          <!-- Kartu Info Ringkas Tambahan -->
+          <div class="quick-academic-info">
+            <div class="info-row">
+              <span class="info-label">Program Studi:</span>
+              <span class="info-value">S1 Sistem Informasi</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Institusi:</span>
+              <span class="info-value">Institut Teknologi Del</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Mata Kuliah:</span>
+              <span class="info-value">Pemrograman Praktikum Web (PPW)</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Lokasi:</span>
+              <span class="info-value">Pandan &bull; Laguboti, Sumatera Utara</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- SECTION 2: PORTOFOLIO KARYA (GALERI PROYEK WEB TERPILIH)       -->
+    <!-- --------------------------------------------------------------- -->
+    <section id="portofolio" class="section-portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Karya &amp; Implementasi Nyata</span>
+          <h2 id="portfolio-title" class="section-title">Galeri Portofolio Proyek Terpilih</h2>
+          <p class="section-subtitle">
+            Kumpulan aplikasi web dan ekosistem digital nyata yang dibangun dengan standar kode semantik, performa tinggi, serta kepatuhan pada aksesibilitas web dan kepuasan pengguna.
+          </p>
+        </div>
+
+        <!-- Grid Portofolio Kartu Proyek -->
+        <div class="portfolio-grid">
+
+          <!-- Kartu Proyek 1: KUSKAS -->
+          <article class="project-card">
+            <figure class="project-media">
+              <img src="assets/images/project-3.jpg" 
+                   alt="Tangkapan layar aplikasi KUSKAS - Keuangan Sakti Kas menampilkan antarmuka aplikasi mobile Flutter dan web panel admin" 
+                   class="project-img" 
+                   width="640" 
+                   height="360" 
+                   loading="lazy">
+              <figcaption class="project-badge">Web &amp; Mobile Ecosystem</figcaption>
+            </figure>
+            <div class="project-body">
+              <h3 class="project-title">KUSKAS — Keuangan Sakti Kas</h3>
+              <p class="project-desc">
+                Ekosistem pencatatan keuangan pribadi cerdas yang terdiri dari aplikasi Android dan web admin panel. Memecahkan tantangan pencatatan manual melalui voice recording dengan kategorisasi otomatis Gemini AI, fitur QR Code login, dan sinkronisasi real-time Supabase.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Flutter &amp; Dart</span>
+                <span class="tech-tag">Laravel &amp; React</span>
+                <span class="tech-tag">Supabase Realtime</span>
+                <span class="tech-tag">Gemini AI</span>
+              </div>
+              <div class="project-links">
+                <a href="#riwayat" class="btn btn-outline btn-sm">Lihat Rekam Akademik</a>
+                <a href="https://github.com/boyharendy/Projek_Kuskas_App_Web" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="Buka kode repositori proyek KUSKAS di GitHub (terbuka di tab baru)">
+                  Kode Sumber Repositori &nearr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kartu Proyek 2: KOCARI -->
+          <article class="project-card">
+            <figure class="project-media">
+              <img src="assets/images/project-2.jpg" 
+                   alt="Tangkapan layar antarmuka KOCARI E-Commerce Trust Aggregator dan web scraping perbandingan harga produk e-commerce" 
+                   class="project-img" 
+                   width="640" 
+                   height="360" 
+                   loading="lazy">
+              <figcaption class="project-badge">E-Commerce &amp; Data Scraping</figcaption>
+            </figure>
+            <div class="project-body">
+              <h3 class="project-title">KOCARI — E-Commerce Trust Aggregator</h3>
+              <p class="project-desc">
+                Platform mesin pencari cerdas dan agregator kepercayaan toko daring. Mengotomatisasi pengumpulan data, perbandingan harga produk, serta evaluasi tingkat reputasi penjual dari berbagai marketplace besar melalui arsitektur scraping data yang efisien.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript ES6+</span>
+                <span class="tech-tag">Web Scraping</span>
+                <span class="tech-tag">Data Aggregation</span>
+                <span class="tech-tag">Responsive UI</span>
+              </div>
+              <div class="project-links">
+                <a href="#layanan" class="btn btn-outline btn-sm">Diskusikan Serupa</a>
+                <a href="https://github.com/boyharendy/KOCARI--Website-scraping" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="Buka kode repositori proyek KOCARI di GitHub (terbuka di tab baru)">
+                  Kode Sumber Repositori &nearr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kartu Proyek 3: Aether Weather -->
+          <article class="project-card">
+            <figure class="project-media">
+              <img src="assets/images/project-1.jpg" 
+                   alt="Tangkapan layar Aether Weather App menampilkan prakiraan cuaca real-time dengan desain antarmuka Glassmorphism modern" 
+                   class="project-img" 
+                   width="640" 
+                   height="360" 
+                   loading="lazy">
+              <figcaption class="project-badge">Interactive Weather App</figcaption>
+            </figure>
+            <div class="project-body">
+              <h3 class="project-title">Aether Weather — Glassmorphism App</h3>
+              <p class="project-desc">
+                Aplikasi cuaca interaktif dengan estetika Glassmorphism modern dan latar belakang dinamis yang beradaptasi dengan kondisi cuaca secara real-time. Menyajikan prakiraan cuaca per jam dan 5 hari ke depan secara presisi serta mendukung dwibahasa.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript / React</span>
+                <span class="tech-tag">Glassmorphism CSS</span>
+                <span class="tech-tag">OpenWeather API</span>
+                <span class="tech-tag">WCAG 2.2 AA</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/boyharendy/Aether-Weather" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="Buka kode repositori Aether Weather di GitHub (terbuka di tab baru)">
+                  Tinjau Repositori
+                </a>
+                <a href="https://github.com/boyharendy" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="Lihat seluruh repositori proyek Boy Harendy di GitHub (terbuka di tab baru)">
+                  Semua Proyek GitHub &nearr;
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- SECTION 3: RIWAYAT MATAKULIAH & PROYEK (TABEL SEMANTIK LENGKAP) -->
+    <!-- --------------------------------------------------------------- -->
+    <section id="riwayat" class="section-history" aria-labelledby="history-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Transparansi Akademik</span>
+          <h2 id="history-title" class="section-title">Riwayat Matakuliah &amp; Rekam Jejak Akademik</h2>
+          <p class="section-subtitle">
+            Penyajian data tabular semantik yang memuat riwayat matakuliah inti Program Studi S1 Sistem Informasi di Institut Teknologi Del, bobot SKS, capaian nilai, dan kompetensi teknis yang dikuasai.
+          </p>
+        </div>
+
+        <!-- Wadah Tabel Responsif (Bisa di-scroll horizontal pada perangkat kecil) -->
+        <div class="table-responsive-container" tabindex="0" role="region" aria-label="Tabel Riwayat Matakuliah Akademik">
+          <table class="academic-table">
+            <!-- Caption Wajib untuk Aksesibilitas Screen Reader -->
+            <caption class="sr-only">
+              Daftar Riwayat Akademik Matakuliah dan Capaian Kompetensi Boy Harendy Simamora di S1 Sistem Informasi Institut Teknologi Del beserta Bobot SKS, Nilai Akhir, dan Catatan Teknis
+            </caption>
+
+            <!-- Thead Semantik dengan scope="col" -->
+            <thead>
+              <tr>
+                <th scope="col">Nama Matakuliah &amp; Proyek</th>
+                <th scope="col">Semester &amp; Periode</th>
+                <th scope="col">Bobot SKS</th>
+                <th scope="col">Nilai / Status</th>
+                <th scope="col">Catatan Teknis &amp; Hasil Capaian</th>
+              </tr>
+            </thead>
+
+            <!-- Tbody dengan Minimal 5 Baris Data & scope="row" pada Setiap Entri -->
+            <tbody>
+              <tr>
+                <th scope="row">Pemrograman Berorientasi Objek (PBO / Java)</th>
+                <td>Semester 2 (Genap 2025)</td>
+                <td>4 SKS</td>
+                <td><span class="grade-badge grade-a">Nilai A (4.00)</span></td>
+                <td>Penguasaan konsep OOP Java fundamental: enkapsulasi, pewarisan, polimorfisme, dan arsitektur aplikasi modular.</td>
+              </tr>
+              <tr>
+                <th scope="row">Sistem Basis Data &amp; Relasional (SQL/MySQL)</th>
+                <td>Semester 3 (Ganjil 2025)</td>
+                <td>4 SKS</td>
+                <td><span class="grade-badge grade-a">Nilai A (4.00)</span></td>
+                <td>Perancangan skema relasional, normalisasi 1NF-3NF, optimasi kueri SQL, integritas data, dan manajemen transaksi.</td>
+              </tr>
+              <tr>
+                <th scope="row">Struktur Data &amp; Algoritma Pemrograman (C / Python)</th>
+                <td>Semester 2 (Genap 2025)</td>
+                <td>3 SKS</td>
+                <td><span class="grade-badge grade-a">Nilai A (3.90)</span></td>
+                <td>Implementasi struktur data dinamis, algoritma pencarian dan traversal, efisiensi memori, serta analisis Big-O.</td>
+              </tr>
+              <tr>
+                <th scope="row">Analisis &amp; Perancangan Sistem Informasi (APSI)</th>
+                <td>Semester 3 (Ganjil 2025)</td>
+                <td>3 SKS</td>
+                <td><span class="grade-badge grade-a">Nilai A (4.00)</span></td>
+                <td>Penyusunan PRD, pemodelan alur bisnis (BPMN), diagram UML, use case komprehensif, dan metodologi Agile.</td>
+              </tr>
+              <tr>
+                <th scope="row">Pemrograman Berbasis Web &amp; Antarmuka Interaktif</th>
+                <td>Semester 4 (Genap 2026)</td>
+                <td>3 SKS</td>
+                <td><span class="grade-badge grade-a">Nilai A (4.00)</span></td>
+                <td>Pengembangan antarmuka web modern dengan React/JS, HTML5 semantik, CSS responsif, dan integrasi API publik.</td>
+              </tr>
+              <tr>
+                <th scope="row">Pemrograman Praktikum Web (PPW)</th>
+                <td>Semester 5 (Ganjil 2026)</td>
+                <td>2 SKS</td>
+                <td><span class="grade-badge grade-ongoing">Sedang Berjalan</span></td>
+                <td>Tugas mandiri: Portofolio Web &amp; Layanan Interaktif Accessible murni tanpa framework sesuai standar WCAG 2.2 AA.</td>
+              </tr>
+            </tbody>
+
+            <!-- Tfoot Semantik untuk Baris Ringkasan Capaian -->
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="2">Akumulasi Kredit &amp; Rata-rata Capaian</th>
+                <td>19 SKS (Inti SI)</td>
+                <td><strong>IPK: 3.95 / 4.00</strong></td>
+                <td>Status: Sangat Memuaskan (Cum Laude Track)</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- SECTION 4: FORMULIR PEMESANAN LAYANAN INTERAKTIF ACCESSIBLE     -->
+    <!-- --------------------------------------------------------------- -->
+    <section id="layanan" class="section-services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Kolaborasi &amp; Konsultasi</span>
+          <h2 id="services-title" class="section-title">Formulir Pemesanan Layanan &amp; Kerja Sama</h2>
+          <p class="section-subtitle">
+            Silakan lengkapi formulir resmi di bawah ini untuk mengajukan konsultasi teknis, pembuatan antarmuka web, audit aksesibilitas, maupun perancangan solusi sistem informasi.
+          </p>
+        </div>
+
+        <div class="form-wrapper">
+          <!-- Formulir Interaktif dengan Validasi Native HTML5 Murni -->
+          <form action="mailto:boyharendy321@gmail.com" method="POST" enctype="text/plain" class="consultation-form">
+
+            <p class="form-instruction">
+              Bagian bertanda bintang (<span class="required-mark" aria-hidden="true">*</span>) wajib diisi sebelum mengirimkan data.
+            </p>
+
+            <!-- FIELDSET 1: DATA DIRI KLIEN / PENGUNJUNG -->
+            <fieldset class="form-fieldset">
+              <legend class="fieldset-legend">1. Data Diri &amp; Kontak Resmi</legend>
+
+              <div class="form-grid">
+                <!-- Tipe Input 1: Text -->
+                <div class="form-group">
+                  <label for="nama_pengirim" class="form-label">
+                    Nama Lengkap <span class="required-mark" aria-label="Wajib diisi">*</span>
+                  </label>
+                  <input type="text" 
+                         id="nama_pengirim" 
+                         name="nama_pengirim" 
+                         class="form-input" 
+                         required 
+                         minlength="3" 
+                         maxlength="80" 
+                         placeholder="Contoh: Budi Santoso" 
+                         autocomplete="name">
+                  <span class="input-hint">Masukkan nama lengkap sesuai identitas resmi Anda (minimal 3 karakter).</span>
+                </div>
+
+                <!-- Tipe Input 2: Email -->
+                <div class="form-group">
+                  <label for="email_pengirim" class="form-label">
+                    Alamat Email Aktif <span class="required-mark" aria-label="Wajib diisi">*</span>
+                  </label>
+                  <input type="email" 
+                         id="email_pengirim" 
+                         name="email_pengirim" 
+                         class="form-input" 
+                         required 
+                         placeholder="budi.santoso@instansi.ac.id" 
+                         autocomplete="email">
+                  <span class="input-hint">Konfirmasi balasan dan proposal akan dikirimkan ke email ini.</span>
+                </div>
+
+                <!-- Tipe Input 3: Tel -->
+                <div class="form-group full-width">
+                  <label for="nomor_telepon" class="form-label">
+                    Nomor Telepon / WhatsApp <span class="required-mark" aria-label="Wajib diisi">*</span>
+                  </label>
+                  <input type="tel" 
+                         id="nomor_telepon" 
+                         name="nomor_telepon" 
+                         class="form-input" 
+                         required 
+                         pattern="^(\+62|62|0)8[1-9][0-9]{6,11}$" 
+                         placeholder="Contoh: 081234567890 atau +6281234567890" 
+                         autocomplete="tel">
+                  <span class="input-hint">Format Indonesia: diawali 08 atau +628, terdiri dari 10 hingga 14 digit angka.</span>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- FIELDSET 2: SPESIFIKASI LAYANAN & KONSULTASI -->
+            <fieldset class="form-fieldset">
+              <legend class="fieldset-legend">2. Spesifikasi Layanan &amp; Kebutuhan Proyek</legend>
+
+              <!-- Tipe Input 4: Radio Buttons (Kategori Layanan) -->
+              <div class="form-group">
+                <span class="form-label-group" id="label-kategori-layanan">
+                  Pilih Kategori Layanan yang Dibutuhkan <span class="required-mark" aria-label="Wajib diisi">*</span>
+                </span>
+                <div class="radio-group-container" role="radiogroup" aria-labelledby="label-kategori-layanan">
+                  <label class="radio-card-label" for="layanan-frontend">
+                    <input type="radio" 
+                           id="layanan-frontend" 
+                           name="kategori_layanan" 
+                           value="Pengembangan Web Front-End Semantik" 
+                           checked 
+                           required>
+                    <span class="radio-custom-visual"></span>
+                    <span class="radio-content">
+                      <strong class="radio-title">Pengembangan Web Front-End Semantik</strong>
+                      <span class="radio-desc">Pembuatan halaman web profil, landing page responsif, atau UI interaktif bersih tanpa dependensi berlebih.</span>
+                    </span>
+                  </label>
+
+                  <label class="radio-card-label" for="layanan-audit">
+                    <input type="radio" 
+                           id="layanan-audit" 
+                           name="kategori_layanan" 
+                           value="Audit Aksesibilitas WCAG 2.2 AA">
+                    <span class="radio-custom-visual"></span>
+                    <span class="radio-content">
+                      <strong class="radio-title">Audit Aksesibilitas WCAG 2.2 AA</strong>
+                      <span class="radio-desc">Pemeriksaan rasio kontras warna, navigasi keyboard, struktur heading, dan kepatuhan standar W3C.</span>
+                    </span>
+                  </label>
+
+                  <label class="radio-card-label" for="layanan-si">
+                    <input type="radio" 
+                           id="layanan-si" 
+                           name="kategori_layanan" 
+                           value="Solusi Sistem Informasi & Analisis Data">
+                    <span class="radio-custom-visual"></span>
+                    <span class="radio-content">
+                      <strong class="radio-title">Solusi Sistem Informasi &amp; Analisis Data</strong>
+                      <span class="radio-desc">Perancangan arsitektur basis data, web scraping data, pemodelan proses bisnis, dan integrasi API cerdas.</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-grid">
+                <!-- Tipe Input 5: Number -->
+                <div class="form-group">
+                  <label for="jumlah_sesi" class="form-label">
+                    Estimasi Sesi / Durasi Minggu <span class="required-mark" aria-label="Wajib diisi">*</span>
+                  </label>
+                  <input type="number" 
+                         id="jumlah_sesi" 
+                         name="jumlah_sesi" 
+                         class="form-input" 
+                         min="1" 
+                         max="12" 
+                         value="1" 
+                         required>
+                  <span class="input-hint">Pilih antara 1 hingga 12 sesi/minggu pertemuan kerja sama.</span>
+                </div>
+
+                <!-- Tipe Input 6: Select Dropdown -->
+                <div class="form-group">
+                  <label for="skema_kerja_sama" class="form-label">
+                    Skema Kerja Sama / Waktu Pengerjaan <span class="required-mark" aria-label="Wajib diisi">*</span>
+                  </label>
+                  <select id="skema_kerja_sama" name="skema_kerja_sama" class="form-select" required>
+                    <option value="" disabled selected>-- Pilih Skema Waktu Kerja Sama --</option>
+                    <option value="Reguler (2-3 Minggu Pengerjaan)">Reguler (2 - 3 Minggu Pengerjaan Santai)</option>
+                    <option value="Prioritas Cepat (1 Minggu Pengerjaan)">Prioritas Cepat (1 Minggu Target Selesai)</option>
+                    <option value="Proyek Akhir Semester / Tugas Besar">Proyek Akhir Semester / Tugas Praktikum Mahasiswa</option>
+                    <option value="Kerja Sama Organisasi / Lembaga Kampus">Kerja Sama Organisasi / Riset Kampus</option>
+                  </select>
+                  <span class="input-hint">Tentukan fleksibilitas tenggat waktu penyelesaian tugas atau proyek.</span>
+                </div>
+              </div>
+
+              <!-- Tipe Input 7: Checkbox (Multi-pilihan Kanal Komunikasi) -->
+              <div class="form-group">
+                <span class="form-label-group" id="label-kanal-komunikasi">
+                  Preferensi Kanal Komunikasi Resmi (Boleh Pilih Lebih dari Satu):
+                </span>
+                <div class="checkbox-group" role="group" aria-labelledby="label-kanal-komunikasi">
+                  <label class="checkbox-label" for="kanal-email">
+                    <input type="checkbox" id="kanal-email" name="kanal_komunikasi" value="Email" checked>
+                    <span class="checkbox-custom-visual"></span>
+                    <span>Korespondensi Email Resmi</span>
+                  </label>
+
+                  <label class="checkbox-label" for="kanal-whatsapp">
+                    <input type="checkbox" id="kanal-whatsapp" name="kanal_komunikasi" value="WhatsApp">
+                    <span class="checkbox-custom-visual"></span>
+                    <span>Pesan Instan WhatsApp</span>
+                  </label>
+
+                  <label class="checkbox-label" for="kanal-gmeet">
+                    <input type="checkbox" id="kanal-gmeet" name="kanal_komunikasi" value="Google Meet">
+                    <span class="checkbox-custom-visual"></span>
+                    <span>Diskusi Video Call (Google Meet / Zoom)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Tipe Input 8: Textarea -->
+              <div class="form-group">
+                <label for="catatan_kebutuhan" class="form-label">
+                  Deskripsi Kebutuhan / Catatan Tambahan (Opsional)
+                </label>
+                <textarea id="catatan_kebutuhan" 
+                          name="catatan_kebutuhan" 
+                          class="form-textarea" 
+                          rows="5" 
+                          maxlength="1000" 
+                          placeholder="Jelaskan secara ringkas topik yang ingin didiskusikan, tautan referensi desain atau repositori (jika ada), atau kendala yang sedang dihadapi..."></textarea>
+                <span class="input-hint">Maksimal 1.000 karakter deskripsi bebas.</span>
+              </div>
+
+            </fieldset>
+
+            <!-- Tombol Aksi Formulir: Submit & Reset -->
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-submit">
+                Kirim Permohonan Layanan &rarr;
+              </button>
+              <button type="reset" class="btn btn-secondary btn-reset">
+                Reset Isian Formulir
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------- -->
+    <!-- SECTION 5: ASIDE (INFORMASI TAMBAHAN, STATUS & TESTIMONI)       -->
+    <!-- --------------------------------------------------------------- -->
+    <aside id="aside-info" class="section-aside" aria-labelledby="aside-title">
+      <div class="container aside-grid">
+        
+        <!-- Info Ketersediaan & Badge Keahlian -->
+        <div class="aside-card aside-status">
+          <div class="card-icon-pill" aria-hidden="true">&#x2713;</div>
+          <h2 id="aside-title" class="aside-card-title">Status Ketersediaan Proyek</h2>
+          <p class="aside-card-text">
+            Saat ini saya berstatus mahasiswa aktif S1 Sistem Informasi di Institut Teknologi Del dan terbuka untuk kesempatan kolaborasi proyek web responsif, perancangan sistem informasi, audit aksesibilitas digital, maupun eksplorasi riset teknologi.
+          </p>
+          <ul class="badge-list" aria-label="Rangkuman status pencapaian teknis">
+            <li class="badge-item">100% W3C Validated HTML5</li>
+            <li class="badge-item">WCAG 2.2 AA Contrast Standard</li>
+            <li class="badge-item">Zero Dependency Vanilla CSS</li>
+          </ul>
+        </div>
+
+        <!-- Metrik Singkat -->
+        <div class="aside-card aside-metrics">
+          <div class="card-icon-pill" aria-hidden="true">&#x2605;</div>
+          <h3 class="aside-card-title">Metrik Rekam Jejak Singkat</h3>
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="metric-number">10+</span>
+              <span class="metric-label">Repositori Publik GitHub</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-number">3.95</span>
+              <span class="metric-label">Indeks Prestasi Kumulatif</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Native HTML/CSS Murni</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimoni / Rekomendasi Mentor Singkat -->
+        <div class="aside-card aside-testimonial">
+          <div class="card-icon-pill" aria-hidden="true">&#x201C;</div>
+          <h3 class="aside-card-title">Catatan Pembimbing &amp; Rekan Lab</h3>
+          <blockquote class="mentor-quote" cite="https://www.del.ac.id">
+            <p>
+              &ldquo;Boy Harendy menunjukkan dedikasi dan ketelitian tinggi dalam menyusun arsitektur sistem informasi serta antarmuka web yang bersih dan semantik. Karya-karyanya selalu memadukan fungsionalitas cerdas dengan kepatuhan aksesibilitas yang inklusif bagi seluruh pengguna.&rdquo;
+            </p>
+            <footer class="quote-footer">
+              <cite class="quote-author">
+                <strong>Pembimbing Akademik &bull; Lab Rekayasa Sistem Informasi</strong>
+                <span>Fakultas Informatika &amp; Teknik Elektro &bull; Institut Teknologi Del</span>
+              </cite>
+            </footer>
+          </blockquote>
+        </div>
+
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- ================================================================= -->
+  <!-- FOOTER (KONTAK RESMI, HAK CIPTA & TAUTAN KEMBALI KE ATAS)         -->
+  <!-- ================================================================= -->
+  <footer class="site-footer" id="kontak">
+    <div class="container footer-content">
+      
+      <!-- Kolom 1: Identitas & Deskripsi Repositori -->
+      <div class="footer-col">
+        <span class="footer-logo">Boy<strong>Harendy</strong></span>
+        <p class="footer-desc">
+          Website portofolio tugas mandiri mata kuliah Pemrograman Praktikum Web (PPW) Week 2 tahun 2026. Dibangun dengan integritas akademis, prinsip aksesibilitas web WCAG 2.2 AA, dan kode murni tanpa framework.
+        </p>
+        <p class="footer-repo-name">
+          Repositori Resmi: <code>PPW-Portofolio-Project</code>
+        </p>
+      </div>
+
+      <!-- Kolom 2: Kontak Resmi Mahasiswa (Menggunakan Elemen Semantik Address) -->
+      <div class="footer-col">
+        <h3 class="footer-heading">Kontak Resmi Mahasiswa</h3>
+        <address class="footer-address">
+          <p>
+            <strong>Email Resmi:</strong><br>
+            <a href="mailto:boyharendy321@gmail.com" class="footer-link">boyharendy321@gmail.com</a>
+          </p>
+          <p>
+            <strong>Institusi:</strong><br>
+            Program Studi S1 Sistem Informasi<br>
+            Fakultas Informatika &amp; Teknik Elektro (FITE)<br>
+            Institut Teknologi Del, Laguboti, Toba, Indonesia
+          </p>
+          <p>
+            <strong>Jam Diskusi Akademik:</strong><br>
+            Senin &ndash; Jumat, 09.00 &ndash; 17.00 WIB
+          </p>
+        </address>
+      </div>
+
+      <!-- Kolom 3: Tautan Sosial & Navigasi Cepat -->
+      <div class="footer-col">
+        <h3 class="footer-heading">Tautan &amp; Jejaring Profesional</h3>
+        <ul class="footer-links-list">
+          <li><a href="https://github.com/boyharendy" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub @boyharendy &nearr;</a></li>
+          <li><a href="https://portfolio-mu-olive-15.vercel.app/" target="_blank" rel="noopener noreferrer" class="footer-link">Portofolio Live Vercel &nearr;</a></li>
+          <li><a href="https://www.instagram.com/harendy7/" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram @harendy7 &nearr;</a></li>
+          <li><a href="#tentang" class="footer-link">Profil Mahasiswa</a></li>
+          <li><a href="#portofolio" class="footer-link">Galeri Portofolio</a></li>
+          <li><a href="#riwayat" class="footer-link">Tabel Riwayat Matakuliah</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Garis Pemisah & Baris Bawah Footer -->
+    <div class="container footer-bottom">
+      <p class="copyright-text">
+        &copy; 2026 Boy Harendy Simamora. Hak Cipta Dilindungi Undang-Undang. Tugas Praktikum Web Mandiri.
+      </p>
+      <a href="#top" class="back-to-top-link" aria-label="Kembali ke bagian teratas halaman web">
+        Kembali ke Atas &uarr;
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
+
