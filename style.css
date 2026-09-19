@@ -171,6 +171,16 @@ a:hover {
   border: 0 !important;
 }
 
+/* Reset Definition List untuk Semantik dl/dt/dd */
+dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+dd {
+  margin-inline-start: 0;
+}
+
 /* Utilitas Teks Aksen */
 .text-accent {
   color: var(--accent-primary);
@@ -344,7 +354,8 @@ a:hover {
 }
 
 .btn-primary:active {
-  transform: translateY(0);
+  transform: translateY(1px);
+  box-shadow: 0 1px 3px rgba(15, 118, 110, 0.15);
 }
 
 .btn-secondary {
@@ -427,6 +438,57 @@ a:hover {
               linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-main) 100%);
   border-bottom: 1px solid var(--border-subtle);
 }
+
+/* Scroll-Triggered Entrance Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-content {
+  animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-visual {
+  animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.section-header {
+  animation: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.project-card {
+  animation: fade-in-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.05s; }
+.project-card:nth-child(2) { animation-delay: 0.15s; }
+.project-card:nth-child(3) { animation-delay: 0.25s; }
+
+.aside-card {
+  animation: fade-in-scale 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.aside-card:nth-child(1) { animation-delay: 0.05s; }
+.aside-card:nth-child(2) { animation-delay: 0.15s; }
+.aside-card:nth-child(3) { animation-delay: 0.25s; }
 
 .hero-layout {
   display: grid;
@@ -527,7 +589,8 @@ a:hover {
 .competencies-card:hover,
 .workflow-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: var(--border-strong);
+  border-color: var(--accent-border);
+  transform: translateY(-2px);
 }
 
 .competencies-title,
@@ -825,6 +888,19 @@ a:hover {
   font-size: var(--font-size-sm);
 }
 
+/* Visible Table Caption Styling */
+.table-caption {
+  text-align: left;
+  padding: var(--space-5) var(--space-6);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--bg-surface) 100%);
+  border-bottom: 1px solid var(--accent-border);
+  letter-spacing: -0.2px;
+  line-height: 1.5;
+}
+
 /* Thead */
 .academic-table thead th {
   background-color: #0f172a;
@@ -848,6 +924,7 @@ a:hover {
 
 .academic-table tbody tr:hover {
   background-color: #f1f5f9;
+  box-shadow: inset 3px 0 0 var(--accent-primary);
 }
 
 .academic-table tbody th[scope="row"] {
@@ -1215,6 +1292,13 @@ a:hover {
   box-shadow: var(--shadow-xs);
   display: flex;
   flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.aside-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-border);
 }
 
 .card-icon-pill {
@@ -1400,10 +1484,27 @@ a:hover {
   color: #cbd5e1;
   text-decoration: none;
   transition: color var(--transition-fast);
+  position: relative;
+  display: inline-block;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #2dd4bf;
+  transition: width var(--transition-normal);
 }
 
 .footer-link:hover {
   color: #2dd4bf;
+}
+
+.footer-link:hover::after {
+  width: 100%;
 }
 
 .footer-links-list {

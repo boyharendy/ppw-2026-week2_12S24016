@@ -122,25 +122,25 @@
             </figcaption>
           </figure>
 
-          <!-- Kartu Info Ringkas Tambahan -->
-          <div class="quick-academic-info">
+          <!-- Kartu Info Ringkas Tambahan (Semantic Definition List) -->
+          <dl class="quick-academic-info">
             <div class="info-row">
-              <span class="info-label">Program Studi:</span>
-              <span class="info-value">S1 Sistem Informasi</span>
+              <dt class="info-label">Program Studi</dt>
+              <dd class="info-value">S1 Sistem Informasi</dd>
             </div>
             <div class="info-row">
-              <span class="info-label">Institusi:</span>
-              <span class="info-value">Institut Teknologi Del</span>
+              <dt class="info-label">Institusi</dt>
+              <dd class="info-value">Institut Teknologi Del</dd>
             </div>
             <div class="info-row">
-              <span class="info-label">Mata Kuliah:</span>
-              <span class="info-value">Pemrograman Praktikum Web (PPW)</span>
+              <dt class="info-label">Mata Kuliah</dt>
+              <dd class="info-value">Pemrograman Praktikum Web (PPW)</dd>
             </div>
             <div class="info-row">
-              <span class="info-label">Lokasi:</span>
-              <span class="info-value">Pandan &bull; Laguboti, Sumatera Utara</span>
+              <dt class="info-label">Lokasi</dt>
+              <dd class="info-value">Pandan &bull; Laguboti, Sumatera Utara</dd>
             </div>
-          </div>
+          </dl>
         </div>
 
       </div>
@@ -277,10 +277,19 @@
         <!-- Wadah Tabel Responsif (Bisa di-scroll horizontal pada perangkat kecil) -->
         <div class="table-responsive-container" tabindex="0" role="region" aria-label="Tabel Riwayat Matakuliah Akademik">
           <table class="academic-table">
-            <!-- Caption Wajib untuk Aksesibilitas Screen Reader -->
-            <caption class="sr-only">
-              Daftar Riwayat Akademik Matakuliah dan Capaian Kompetensi Boy Harendy Simamora di S1 Sistem Informasi Institut Teknologi Del beserta Bobot SKS, Nilai Akhir, dan Catatan Teknis
+            <!-- Caption Visible & Accessible -->
+            <caption class="table-caption">
+              Daftar Riwayat Akademik Matakuliah dan Capaian Kompetensi Boy Harendy Simamora di S1 Sistem Informasi Institut Teknologi Del
             </caption>
+
+            <!-- Colgroup Semantik untuk Definisi Kolom -->
+            <colgroup>
+              <col style="width: 25%;">
+              <col style="width: 18%;">
+              <col style="width: 10%;">
+              <col style="width: 15%;">
+              <col style="width: 32%;">
+            </colgroup>
 
             <!-- Thead Semantik dengan scope="col" -->
             <thead>
@@ -297,42 +306,42 @@
             <tbody>
               <tr>
                 <th scope="row">Pemrograman Berorientasi Objek (PBO / Java)</th>
-                <td>Semester 2 (Genap 2025)</td>
+                <td><time datetime="2025-01">Semester 2 (Genap 2025)</time></td>
                 <td>4 SKS</td>
                 <td><span class="grade-badge grade-a">Nilai A (4.00)</span></td>
                 <td>Penguasaan konsep OOP Java fundamental: enkapsulasi, pewarisan, polimorfisme, dan arsitektur aplikasi modular.</td>
               </tr>
               <tr>
                 <th scope="row">Sistem Basis Data &amp; Relasional (SQL/MySQL)</th>
-                <td>Semester 3 (Ganjil 2025)</td>
+                <td><time datetime="2025-08">Semester 3 (Ganjil 2025)</time></td>
                 <td>4 SKS</td>
                 <td><span class="grade-badge grade-a">Nilai A (4.00)</span></td>
                 <td>Perancangan skema relasional, normalisasi 1NF-3NF, optimasi kueri SQL, integritas data, dan manajemen transaksi.</td>
               </tr>
               <tr>
                 <th scope="row">Struktur Data &amp; Algoritma Pemrograman (C / Python)</th>
-                <td>Semester 2 (Genap 2025)</td>
+                <td><time datetime="2025-01">Semester 2 (Genap 2025)</time></td>
                 <td>3 SKS</td>
                 <td><span class="grade-badge grade-a">Nilai A (3.90)</span></td>
                 <td>Implementasi struktur data dinamis, algoritma pencarian dan traversal, efisiensi memori, serta analisis Big-O.</td>
               </tr>
               <tr>
                 <th scope="row">Analisis &amp; Perancangan Sistem Informasi (APSI)</th>
-                <td>Semester 3 (Ganjil 2025)</td>
+                <td><time datetime="2025-08">Semester 3 (Ganjil 2025)</time></td>
                 <td>3 SKS</td>
                 <td><span class="grade-badge grade-a">Nilai A (4.00)</span></td>
                 <td>Penyusunan PRD, pemodelan alur bisnis (BPMN), diagram UML, use case komprehensif, dan metodologi Agile.</td>
               </tr>
               <tr>
                 <th scope="row">Pemrograman Berbasis Web &amp; Antarmuka Interaktif</th>
-                <td>Semester 4 (Genap 2026)</td>
+                <td><time datetime="2026-01">Semester 4 (Genap 2026)</time></td>
                 <td>3 SKS</td>
                 <td><span class="grade-badge grade-a">Nilai A (4.00)</span></td>
                 <td>Pengembangan antarmuka web modern dengan React/JS, HTML5 semantik, CSS responsif, dan integrasi API publik.</td>
               </tr>
               <tr>
                 <th scope="row">Pemrograman Praktikum Web (PPW)</th>
-                <td>Semester 5 (Ganjil 2026)</td>
+                <td><time datetime="2026-08">Semester 5 (Ganjil 2026)</time></td>
                 <td>2 SKS</td>
                 <td><span class="grade-badge grade-ongoing">Sedang Berjalan</span></td>
                 <td>Tugas mandiri: Portofolio Web &amp; Layanan Interaktif Accessible murni tanpa framework sesuai standar WCAG 2.2 AA.</td>
@@ -393,8 +402,9 @@
                          minlength="3" 
                          maxlength="80" 
                          placeholder="Contoh: Budi Santoso" 
-                         autocomplete="name">
-                  <span class="input-hint">Masukkan nama lengkap sesuai identitas resmi Anda (minimal 3 karakter).</span>
+                         autocomplete="name"
+                         aria-describedby="hint-nama">
+                  <span class="input-hint" id="hint-nama">Masukkan nama lengkap sesuai identitas resmi Anda (minimal 3 karakter).</span>
                 </div>
 
                 <!-- Tipe Input 2: Email -->
@@ -408,8 +418,9 @@
                          class="form-input" 
                          required 
                          placeholder="budi.santoso@instansi.ac.id" 
-                         autocomplete="email">
-                  <span class="input-hint">Konfirmasi balasan dan proposal akan dikirimkan ke email ini.</span>
+                         autocomplete="email"
+                         aria-describedby="hint-email">
+                  <span class="input-hint" id="hint-email">Konfirmasi balasan dan proposal akan dikirimkan ke email ini.</span>
                 </div>
 
                 <!-- Tipe Input 3: Tel -->
@@ -424,8 +435,9 @@
                          required 
                          pattern="^(\+62|62|0)8[1-9][0-9]{6,11}$" 
                          placeholder="Contoh: 081234567890 atau +6281234567890" 
-                         autocomplete="tel">
-                  <span class="input-hint">Format Indonesia: diawali 08 atau +628, terdiri dari 10 hingga 14 digit angka.</span>
+                         autocomplete="tel"
+                         aria-describedby="hint-telepon">
+                  <span class="input-hint" id="hint-telepon">Format Indonesia: diawali 08 atau +628, terdiri dari 10 hingga 14 digit angka.</span>
                 </div>
               </div>
             </fieldset>
@@ -493,8 +505,9 @@
                          min="1" 
                          max="12" 
                          value="1" 
-                         required>
-                  <span class="input-hint">Pilih antara 1 hingga 12 sesi/minggu pertemuan kerja sama.</span>
+                         required
+                         aria-describedby="hint-sesi">
+                  <span class="input-hint" id="hint-sesi">Pilih antara 1 hingga 12 sesi/minggu pertemuan kerja sama.</span>
                 </div>
 
                 <!-- Tipe Input 6: Select Dropdown -->
@@ -502,14 +515,14 @@
                   <label for="skema_kerja_sama" class="form-label">
                     Skema Kerja Sama / Waktu Pengerjaan <span class="required-mark" aria-label="Wajib diisi">*</span>
                   </label>
-                  <select id="skema_kerja_sama" name="skema_kerja_sama" class="form-select" required>
+                  <select id="skema_kerja_sama" name="skema_kerja_sama" class="form-select" required aria-describedby="hint-skema">
                     <option value="" disabled selected>-- Pilih Skema Waktu Kerja Sama --</option>
                     <option value="Reguler (2-3 Minggu Pengerjaan)">Reguler (2 - 3 Minggu Pengerjaan Santai)</option>
                     <option value="Prioritas Cepat (1 Minggu Pengerjaan)">Prioritas Cepat (1 Minggu Target Selesai)</option>
                     <option value="Proyek Akhir Semester / Tugas Besar">Proyek Akhir Semester / Tugas Praktikum Mahasiswa</option>
                     <option value="Kerja Sama Organisasi / Lembaga Kampus">Kerja Sama Organisasi / Riset Kampus</option>
                   </select>
-                  <span class="input-hint">Tentukan fleksibilitas tenggat waktu penyelesaian tugas atau proyek.</span>
+                  <span class="input-hint" id="hint-skema">Tentukan fleksibilitas tenggat waktu penyelesaian tugas atau proyek.</span>
                 </div>
               </div>
 
@@ -539,7 +552,37 @@
                 </div>
               </div>
 
-              <!-- Tipe Input 8: Textarea -->
+              <div class="form-grid">
+                <!-- Tipe Input 8: Date -->
+                <div class="form-group">
+                  <label for="tanggal_target" class="form-label">
+                    Tanggal Target Penyelesaian <span class="required-mark" aria-label="Wajib diisi">*</span>
+                  </label>
+                  <input type="date" 
+                         id="tanggal_target" 
+                         name="tanggal_target" 
+                         class="form-input" 
+                         required
+                         aria-describedby="hint-tanggal">
+                  <span class="input-hint" id="hint-tanggal">Tentukan estimasi tanggal deadline penyelesaian proyek Anda.</span>
+                </div>
+
+                <!-- Tipe Input 9: URL -->
+                <div class="form-group">
+                  <label for="referensi_url" class="form-label">
+                    Tautan Referensi Desain / Repositori (Opsional)
+                  </label>
+                  <input type="url" 
+                         id="referensi_url" 
+                         name="referensi_url" 
+                         class="form-input" 
+                         placeholder="https://github.com/username/repo" 
+                         aria-describedby="hint-url">
+                  <span class="input-hint" id="hint-url">Masukkan URL lengkap diawali https:// jika ada referensi desain atau repositori.</span>
+                </div>
+              </div>
+
+              <!-- Tipe Input 10: Textarea -->
               <div class="form-group">
                 <label for="catatan_kebutuhan" class="form-label">
                   Deskripsi Kebutuhan / Catatan Tambahan (Opsional)
@@ -549,8 +592,9 @@
                           class="form-textarea" 
                           rows="5" 
                           maxlength="1000" 
-                          placeholder="Jelaskan secara ringkas topik yang ingin didiskusikan, tautan referensi desain atau repositori (jika ada), atau kendala yang sedang dihadapi..."></textarea>
-                <span class="input-hint">Maksimal 1.000 karakter deskripsi bebas.</span>
+                          placeholder="Jelaskan secara ringkas topik yang ingin didiskusikan, kendala yang sedang dihadapi, atau informasi tambahan lainnya..."
+                          aria-describedby="hint-catatan"></textarea>
+                <span class="input-hint" id="hint-catatan">Maksimal 1.000 karakter deskripsi bebas.</span>
               </div>
 
             </fieldset>
