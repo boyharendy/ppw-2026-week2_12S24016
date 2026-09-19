@@ -6,3 +6,6 @@ Thumbs.db
 # Editor directories
 .vscode/
 .idea/
+
+# Local PRD / Spec
+PRD-Portofolio-Web-HTML5-CSS.md
