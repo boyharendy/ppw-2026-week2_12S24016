@@ -1,91 +1,110 @@
 # PPW Portofolio Project — Boy Harendy Simamora
+### Refactoring Berbasis Bootstrap 5 & Advanced Custom CSS (Tugas Praktikum Minggu 03)
 
-Website portofolio pribadi yang dirancang secara bersih, responsif, dan *accessible* menggunakan **HTML5 Semantik** dan **CSS3 Modern** murni tanpa framework eksternal. Proyek ini dibangun sebagai tugas mandiri mata kuliah **Pemrograman Praktikum Web (PPW)** Semester 5 tahun 2026 di Institut Teknologi Del.
+Website portofolio pribadi dan portal layanan interaktif **Boy Harendy Simamora** (Mahasiswa S1 Sistem Informasi Institut Teknologi Del). Proyek ini merupakan kelanjutan dan pemutakhiran (*refactoring*) menyeluruh dari Tugas Minggu 2, kini mengadopsi standar **Bootstrap 5.3+ CDN**, arsitektur grid responsif 12-kolom, dialog modal interaktif, formulir modern dengan *Floating Labels*, dan kustomisasi variabel CSS tingkat lanjut tanpa mengorbankan integritas semantik **HTML5** dan standar aksesibilitas **WCAG 2.2 AA**.
 
-🌐 **Live Demo:** [https://boyharendy.github.io/PPW-Portofolio-Project/](https://boyharendy.github.io/PPW-Portofolio-Project/)
-
----
-
-## 📸 Screenshot Tampilan
-
-### Desktop View
-> *(Tambahkan tangkapan layar tampilan desktop di sini)*
->
-> Contoh: `![Screenshot Desktop](assets/images/screenshot-desktop.png)`
-
-### Mobile View
-> *(Tambahkan tangkapan layar tampilan mobile di sini)*
->
-> Contoh: `![Screenshot Mobile](assets/images/screenshot-mobile.png)`
+🌐 **Live Demo GitHub Pages:** [https://boyharendy.github.io/PPW-Portofolio-Project/](https://boyharendy.github.io/PPW-Portofolio-Project/)  
+📦 **Branch Khusus Minggu 3:** `week3-bootstrap`
 
 ---
 
 ## 👤 Identitas Mahasiswa
 
-| Keterangan        | Detail                                  |
-|-------------------|-----------------------------------------|
-| **Nama Lengkap**  | Boy Harendy Simamora                    |
-| **NIM**           | 12S24016                                |
-| **Program Studi** | S1 Sistem Informasi                     |
-| **Institusi**     | Institut Teknologi Del                  |
-| **Mata Kuliah**   | Pemrograman Praktikum Web (PPW)         |
-| **Semester**      | 5 (Ganjil 2026)                         |
+| Keterangan | Informasi Resmi |
+| :--- | :--- |
+| **Nama Lengkap** | Boy Harendy Simamora |
+| **NIM** | 12S24016 |
+| **Program Studi** | S1 Sistem Informasi |
+| **Fakultas** | Informatika dan Teknik Elektro (FITE) |
+| **Institusi** | Institut Teknologi Del |
+| **Mata Kuliah** | Pemrograman dan Pengujian Web (12S3101) |
+| **Tahun Akademik** | Semester Ganjil 2026/2027 |
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 📊 Tabel Komparasi: Sebelum vs Sesudah Integrasi Framework
 
-| Teknologi              | Keterangan                                                        |
-|------------------------|-------------------------------------------------------------------|
-| **HTML5 Semantik**     | Struktur dokumen semantik (`header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, `figure`, `dl`, `time`, `address`, `blockquote`) |
-| **CSS3 Modern**        | Custom Properties (CSS Variables), Flexbox, CSS Grid, Animations, Media Queries, `@keyframes`, `backdrop-filter` |
-| **Google Fonts**       | Plus Jakarta Sans — tipografi modern dan nyaman dibaca            |
-| **Validasi Native**    | HTML5 Form Validation (`required`, `pattern`, `minlength`, `maxlength`, `min`, `max`) |
-| **Aksesibilitas**      | WCAG 2.2 Level AA, `aria-label`, `aria-labelledby`, `aria-describedby`, skip link, `:focus-visible` |
-| **Deployment**         | GitHub Pages                                                      |
+Sesuai spesifikasi teknis penugasan Modul 3, berikut adalah perbandingan komparatif arsitektur antarmuka dan basis kode antara **Minggu 2** (Pure Semantic HTML5 & CSS3) dengan **Minggu 3** (Bootstrap 5.3 + Advanced Custom Overrides):
 
----
-
-## ✨ Fitur & Standar Desain
-
-- **HTML5 Semantik Lengkap:** Penggunaan elemen semantik (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`, `<figure>`, `<figcaption>`, `<dl>`, `<time>`, `<address>`, `<blockquote>`, `<cite>`) tanpa *div-soup* berlebihan.
-- **Tabel Semantik Komprehensif:** Tabel data akademik lengkap dengan `<caption>`, `<colgroup>`, `<thead>`, `<tbody>`, `<tfoot>`, serta atribut `scope` pada setiap sel header.
-- **Formulir Interaktif Accessible:** 10 jenis kontrol input (`text`, `email`, `tel`, `radio`, `number`, `select`, `checkbox`, `date`, `url`, `textarea`) dengan `<fieldset>`, `<legend>`, label eksplisit, validasi native HTML5, dan `aria-describedby`.
-- **CSS3 Modern & Responsif:** Tata letak fleksibel menggunakan CSS Grid dan Flexbox, desain 60-30-10 color harmony, entrance animations, smooth hover transitions, dan responsive di seluruh ukuran layar (desktop, tablet, mobile).
-- **Aksesibilitas Digital (WCAG 2.2 AA):** Kontras warna optimal, navigasi keyboard penuh, skip link, alt text gambar, `prefers-reduced-motion` support, dan `focus-visible` outline.
+| Aspek / Komponen | Minggu 2 (Sebelum Refactoring) | Minggu 3 (Sesudah Integrasi Bootstrap 5) |
+| :--- | :--- | :--- |
+| **Pondasi & Framework** | Pure Vanilla CSS murni tanpa dependensi eksternal. | **Bootstrap 5.3.3 CDN** (CSS & JS bundle) + **Bootstrap Icons 1.11.3 CDN**. |
+| **Arsitektur Urutan CSS** | 1 berkas `style.css` independen. | `style.css` dimuat **setelah** Bootstrap CSS untuk *custom overrides* yang elegan sesuai algoritma cascading. |
+| **Navigasi (Navbar)** | Flexbox custom statis di mobile; menu link membentang langsung. | **Responsive Navbar Bootstrap** (`sticky-top`) dengan tombol hamburger collapse (`navbar-toggler`) yang berfungsi mulus di layar ponsel tanpa error console. |
+| **Tata Letak Hero Section** | CSS Flexbox manual dengan media queries kustom. | **Bootstrap 12-Column Grid** (`row`, `col-12`, `col-lg-7`, `col-lg-5`) responsif multi-perangkat. |
+| **Galeri Portofolio** | 3 kartu proyek menggunakan CSS Grid murni. | **Minimal 4 kartu proyek** (`.card.h-100`) dalam grid responsif (`row-cols-1 row-cols-md-2 g-4`), ditambah proyek baru: **DEL-SIP Portal Monitoring Praktikum**. |
+| **Interaktivitas Detail Proyek** | Tautan eksternal biasa tanpa popup. | **Bootstrap Modal Dialog (`.modal.fade`)** interaktif di setiap kartu (4 modal unik berisi latar belakang, arsitektur, dan fitur proyek). |
+| **Formulir Layanan** | Form HTML5 native dengan label dan input standar. | Modernisasi komponen Bootstrap: **Floating Labels** (`.form-floating`), **Input Groups** berikon, dropdown select kustom, dan checkbox S&K. |
+| **Validasi Formulir** | Validasi bawaan peramban (*browser default tooltip*). | **Validasi Visual Interaktif Bootstrap 5** (`needs-validation`, `.valid-feedback`, `.invalid-feedback`) dengan skrip JavaScript terkontrol. |
+| **Pengelolaan Tema & Variabel** | Variabel CSS terbatas pada `:root`. | **$\ge 6$ CSS Variables terstruktur** pada `:root` (`--brand-primary`, `--brand-hover`, `--brand-accent`, `--card-radius`, `--shadow-lift`, dll.) dengan palet khas *Deep Teal & Slate*. |
+| **Mikro-Interaksi Kartu** | Transformasi translateY standar. | **Lab 1 Micro-interaction**: Garis aksen animasi pseudo-element `::before` (`scaleX(0)` $\rightarrow$ `scaleX(1)`) dikombinasikan dengan elevasi `box-shadow`. |
+| **Kepatuhan Aturan CSS** | Tanpa aturan spesifisitas ketat. | **Zero arbitrary `!important`**; seluruh override framework ditangani melalui selektor spesifisitas yang terencana. |
 
 ---
 
-## 📂 Struktur Direktori
+## 📸 Dokumentasi Antarmuka (Screenshots)
+
+### 1. Desktop View (Hero & Responsive Sticky Navbar)
+![Desktop View Hero](assets/images/project-1.jpg)
+
+### 2. Grid Portofolio Responsif & Modal Dialog Detail
+![Portfolio Grid](assets/images/project-4.jpg)
+
+### 3. Formulir Layanan Modern (Floating Labels & Input Groups)
+![Formulir Modern](assets/images/project-2.jpg)
+
+---
+
+## 🛠️ Pustaka & Teknologi yang Digunakan
+
+1. **Bootstrap 5.3.3 (CDN):** Sistem grid 12-kolom responsif, Flexbox utilities, Card components, Modal dialog, dan Floating form controls.
+2. **Bootstrap Icons 1.11.3 (CDN):** Ikonografi vektor SVG untuk input fields, status badges, dan tombol navigasi.
+3. **HTML5 Semantik:** Struktur dokumen tetap menggunakan elemen semantik standar (`header`, `nav`, `main`, `section`, `article`, `figure`, `dl`, `aside`, `footer`, `address`).
+4. **Advanced Custom CSS Overrides:** Variabel global `:root`, animasi pseudo-elements `::before`, glassmorphism backdrop filter, dan harmonisasi warna brand.
+5. **Google Fonts (Plus Jakarta Sans):** Tipografi sans-serif modern yang nyaman dibaca.
+6. **Aksesibilitas (WCAG 2.2 Level AA):** Kontras rasio warna tinggi, skip link, navigasi keyboard penuh, dan fokus outline terlihat.
+7. **Git & GitHub Pages:** Branching `PPW-2026-Week3_12S24016` dan hosting otomatis.
+
+---
+
+## 📂 Struktur Direktori Proyek
 
 ```
-PPW-Portofolio-Project/
-├── index.html              # Halaman utama portofolio (HTML5 Semantik)
-├── style.css               # Stylesheet utama (CSS3 Modern, tanpa framework)
-├── README.md               # Dokumentasi proyek
-├── .gitignore              # Konfigurasi Git ignore
+ppw-2026-week2_12S24016/
+├── index.html                           # Halaman utama portofolio (Bootstrap 5.3 + Semantik)
+├── style.css                            # Stylesheet kustom (CSS Variables & Overrides)
+├── README.md                            # Dokumentasi komprehensif & tabel komparasi
+├── penjelasan.md                        # Panduan naskah presentasi video (10+ menit)
+├── Modul_Praktikum_Week3_CSS_Framework.pdf # Dokumen panduan praktikum resmi
+├── .gitignore                           # Konfigurasi Git ignore
 └── assets/
     └── images/
-        ├── profile.jpg     # Foto profil mahasiswa
-        ├── project-1.jpg   # Screenshot proyek Aether Weather
-        ├── project-2.jpg   # Screenshot proyek KOCARI
-        └── project-3.jpg   # Screenshot proyek KUSKAS
+        ├── profile.jpg                  # Foto potret resmi mahasiswa
+        ├── project-1.jpg                # Screenshot proyek Aether Weather
+        ├── project-2.jpg                # Screenshot proyek KOCARI Aggregator
+        ├── project-3.jpg                # Screenshot proyek KUSKAS Financial App
+        └── project-4.jpg                # Screenshot proyek DEL-SIP Academic Portal (Proyek ke-4)
 ```
 
 ---
 
-## 🚀 Cara Menjalankan
+## 🚀 Panduan Menjalankan Secara Lokal
 
-1. **Clone** repositori ini:
+1. Buka terminal dan masuk ke repositori proyek:
    ```bash
-   git clone https://github.com/boyharendy/PPW-Portofolio-Project.git
+   cd "e:\TUGAS\SEMESTER 5\PPW\PPW P\Prak 2\portofolio"
    ```
-2. Buka berkas `index.html` langsung di peramban web (*browser*) favorit Anda.
-3. Atau jalankan menggunakan ekstensi **Live Server** di VS Code untuk *hot-reload*.
+2. Pastikan berada di branch `PPW-2026-Week3_12S24016`:
+   ```bash
+   git status
+   ```
+3. Buka berkas `index.html` menggunakan browser modern (Google Chrome, Microsoft Edge, Firefox) atau jalankan ekstensi **Live Server** pada Visual Studio Code.
+4. Lakukan pengujian responsivitas melalui browser DevTools (`Ctrl + Shift + I` $\rightarrow$ Toggle Device Toolbar / `Ctrl + Shift + M`).
 
 ---
 
-## 📝 Lisensi
+## 📝 Lisensi & Integritas Akademik
 
-© 2026 Boy Harendy Simamora. Seluruh hak cipta dilindungi undang-undang.  
-Tugas Praktikum Web Mandiri — Institut Teknologi Del.
+© 2026 **Boy Harendy Simamora** (NIM: 12S24016).  
+Program Studi S1 Sistem Informasi — Fakultas Informatika dan Teknik Elektro, Institut Teknologi Del.  
+Tugas Mandiri Praktikum Pemrograman dan Pengujian Web (PPW 2026).
