@@ -74,8 +74,6 @@ ppw-2026-week2_12S24016/
 ├── index.html                           # Halaman utama portofolio (Bootstrap 5.3 + Semantik)
 ├── style.css                            # Stylesheet kustom (CSS Variables & Overrides)
 ├── README.md                            # Dokumentasi komprehensif & tabel komparasi
-├── penjelasan.md                        # Panduan naskah presentasi video (10+ menit)
-├── Modul_Praktikum_Week3_CSS_Framework.pdf # Dokumen panduan praktikum resmi
 ├── .gitignore                           # Konfigurasi Git ignore
 └── assets/
     └── images/

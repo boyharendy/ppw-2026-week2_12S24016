@@ -7,5 +7,7 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Local PRD / Spec
+# Local PRD / Spec & Documents
 PRD-Portofolio-Web-HTML5-CSS.md
+penjelasan.md
+*.pdf
