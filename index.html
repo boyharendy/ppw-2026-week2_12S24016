@@ -8,28 +8,26 @@
   <meta name="author" content="Boy Harendy Simamora">
   <title>Boy Harendy Simamora | Portofolio &amp; Layanan Web (Bootstrap 5 &amp; Advanced CSS)</title>
 
-  <!-- Google Fonts: Plus Jakarta Sans untuk Tipografi Modern & Bersih -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
-  <!-- Framework 1: Bootstrap 5.3.3 CSS via CDN (Fondasi Grid & Komponen) -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-  <!-- Framework 2: Bootstrap Icons 1.11.3 via CDN -->
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- Stylesheet Eksternal: Custom CSS Overrides (Dimuat SETELAH Bootstrap sesuai aturan Cascading) -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
-</head>
+</head>https://github.com/boyharendy/ppw-2026-week2_12S24016/tree/PPW-2026-Week3_12S24016
 <body id="top">
 
-  <!-- Aksesibilitas: Tautan Langsung Lewati ke Konten Utama (WCAG 2.2 AA) -->
+  <!-- Skip Link Accessibility -->
   <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
 
-  <!-- ================================================================= -->
-  <!-- HEADER & RESPONSIVE NAVBAR BOOTSTRAP 5 (STICKY-TOP)              -->
-  <!-- ================================================================= -->
+  <!-- Header Navigation-->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg site-navbar shadow-sm" aria-label="Navigasi Utama Situs">
       <div class="container">
@@ -39,7 +37,7 @@
           <span class="logo-text">Boy<strong>Harendy</strong></span>
         </a>
 
-        <!-- Hamburger Toggle Button untuk Mobile Screens -->
+        <!-- Mobile Toggle -->
         <button class="navbar-toggler border-0 shadow-none" 
                 type="button" 
                 data-bs-toggle="collapse" 
@@ -63,7 +61,7 @@
               <a class="nav-link" href="#riwayat">Riwayat Akademik</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#layanan">Layanan &amp; Kontak</a>
+              <a class="nav-link" href="#layanan">Layanan &amp; Kontak <span id="orderBadge" class="badge bg-danger rounded-pill d-none ms-1">0</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#aside-info">Status &amp; Metrik</a>
@@ -79,19 +77,15 @@
     </nav>
   </header>
 
-  <!-- ================================================================= -->
-  <!-- KONTEN UTAMA (MAIN LANDMARK)                                      -->
-  <!-- ================================================================= -->
+  <!-- Main Content-->
   <main id="main-content">
 
-    <!-- --------------------------------------------------------------- -->
-    <!-- SECTION 1: TENTANG SAYA (HERO SECTION MULTI-KOLOM BOOTSTRAP)   -->
-    <!-- --------------------------------------------------------------- -->
+    <!-- Hero Section-->
     <section id="tentang" class="section-hero py-5" aria-labelledby="hero-title">
       <div class="container">
         <div class="row align-items-center g-5">
           
-          <!-- Kolom Kiri: Profil & Keterangan (col-lg-7) -->
+          <!-- Profil Hero -->
           <div class="col-12 col-lg-7">
             <div class="badge-status-pill mb-3 d-inline-flex align-items-center">
               <span class="status-indicator me-2" aria-hidden="true"></span>
@@ -110,7 +104,7 @@
               Saya mahasiswa Program Studi Sistem Informasi di <strong>Institut Teknologi Del</strong> dengan ketertarikan mendalam pada rekayasa web modern, arsitektur <em>backend</em>, analisis data terintegrasi, dan antarmuka inklusif. Proyek portofolio ini merepresentasikan penguasaan tata letak semantik, integrasi framework <strong>Bootstrap 5</strong>, dan kustomisasi variabel CSS tingkat lanjut sesuai standar <strong>WCAG 2.2 Level AA</strong>.
             </p>
 
-            <!-- Aksi Utama (CTA Buttons) -->
+            <!-- Tombol Aksi -->
             <div class="d-flex flex-wrap gap-3 mb-4">
               <a href="#layanan" class="btn btn-brand-primary btn-lg shadow-sm">
                 <i class="bi bi-send-fill me-2" aria-hidden="true"></i> Ajukan Konsultasi
@@ -120,7 +114,7 @@
               </a>
             </div>
 
-            <!-- List Terstruktur 1: Keahlian Utama (Unordered List) -->
+            <!-- Keahlian -->
             <div class="competencies-card p-4 rounded-4 shadow-sm mb-4">
               <h2 class="h5 mb-3 d-flex align-items-center fw-bold">
                 <i class="bi bi-stars text-accent me-2" aria-hidden="true"></i> Kompetensi Inti &amp; Teknologi Unggulan:
@@ -133,7 +127,7 @@
               </ul>
             </div>
 
-            <!-- List Terstruktur 2: Alur Kerja Proyek (Ordered List) -->
+            <!-- Alur Kerja -->
             <div class="workflow-card p-4 rounded-4 shadow-sm">
               <h2 class="h5 mb-3 d-flex align-items-center fw-bold">
                 <i class="bi bi-diagram-3-fill text-accent me-2" aria-hidden="true"></i> Tahapan Standar Pengerjaan Proyek:
@@ -148,7 +142,7 @@
             </div>
           </div>
 
-          <!-- Kolom Kanan: Foto Profil & Kartu Identitas Akademik (col-lg-5) -->
+          <!-- Foto Profil -->
           <div class="col-12 col-lg-5">
             <figure class="profile-figure text-center p-3 rounded-4 shadow-sm mb-4">
               <img src="assets/images/profile.jpg" 
@@ -162,7 +156,7 @@
               </figcaption>
             </figure>
 
-            <!-- Kartu Info Ringkas Tambahan (Semantic Definition List) -->
+            <!-- Info Akademik -->
             <dl class="quick-academic-info p-4 rounded-4 shadow-sm mb-0">
               <div class="info-row d-flex justify-content-between py-2 border-bottom">
                 <dt class="info-label text-muted fw-semibold">Program Studi</dt>
@@ -187,9 +181,7 @@
       </div>
     </section>
 
-    <!-- --------------------------------------------------------------- -->
-    <!-- SECTION 2: PORTOFOLIO KARYA (GRID RESPONSIVE BOOTSTRAP 5)       -->
-    <!-- --------------------------------------------------------------- -->
+    <!-- Portfolio Section-->
     <section id="portofolio" class="section-portfolio py-5" aria-labelledby="portfolio-title">
       <div class="container">
         
@@ -201,196 +193,14 @@
           </p>
         </div>
 
-        <!-- Grid Portofolio Responsif (Minimal 4 Kartu Proyek sesuai Modul 3) -->
-        <div class="row row-cols-1 row-cols-md-2 g-4 portfolio-grid">
-
-          <!-- KARTU PROYEK 1: KUSKAS -->
-          <div class="col">
-            <article class="card h-100 project-card shadow-sm border-0">
-              <div class="position-relative overflow-hidden project-media">
-                <img src="assets/images/project-3.jpg" 
-                     alt="Tangkapan layar aplikasi KUSKAS - Keuangan Sakti Kas" 
-                     class="card-img-top project-img" 
-                     loading="lazy"
-                     width="640"
-                     height="400">
-                <span class="badge bg-dark-subtle text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm">
-                  Web &amp; Mobile Ecosystem
-                </span>
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <h3 class="card-title h5 fw-bold mb-2">KUSKAS — Keuangan Sakti Kas</h3>
-                <p class="card-text text-muted flex-grow-1 mb-3">
-                  Ekosistem pencatatan keuangan pribadi cerdas berbasis aplikasi Android dan web admin panel. Menggunakan voice recording dengan kategorisasi otomatis Gemini AI, otentikasi QR Code, dan sinkronisasi real-time Supabase.
-                </p>
-                <div class="project-tech d-flex flex-wrap gap-2 mb-3">
-                  <span class="badge bg-light text-dark border">Flutter &amp; Dart</span>
-                  <span class="badge bg-light text-dark border">Laravel &amp; React</span>
-                  <span class="badge bg-light text-dark border">Supabase</span>
-                  <span class="badge bg-light text-dark border">Gemini AI</span>
-                </div>
-                <div class="d-flex flex-wrap gap-2 pt-2 border-top">
-                  <!-- Trigger Modal Dialog 1 -->
-                  <button type="button" 
-                          class="btn btn-brand-primary btn-sm flex-fill" 
-                          data-bs-toggle="modal" 
-                          data-bs-target="#modalProjectKuskas">
-                    <i class="bi bi-window-stack me-1" aria-hidden="true"></i> Detail Proyek &amp; Modal
-                  </button>
-                  <a href="https://github.com/boyharendy/Projek_Kuskas_App_Web" 
-                     target="_blank" 
-                     rel="noopener noreferrer" 
-                     class="btn btn-outline-secondary btn-sm" 
-                     aria-label="Buka repositori KUSKAS di GitHub">
-                    <i class="bi bi-github me-1" aria-hidden="true"></i> GitHub &nearr;
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- KARTU PROYEK 2: KOCARI -->
-          <div class="col">
-            <article class="card h-100 project-card shadow-sm border-0">
-              <div class="position-relative overflow-hidden project-media">
-                <img src="assets/images/project-2.jpg" 
-                     alt="Tangkapan layar antarmuka KOCARI E-Commerce Trust Aggregator" 
-                     class="card-img-top project-img" 
-                     loading="lazy"
-                     width="640"
-                     height="400">
-                <span class="badge bg-dark-subtle text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm">
-                  Data Scraping &amp; E-Commerce
-                </span>
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <h3 class="card-title h5 fw-bold mb-2">KOCARI — E-Commerce Trust Aggregator</h3>
-                <p class="card-text text-muted flex-grow-1 mb-3">
-                  Platform mesin pencari cerdas dan agregator reputasi penjual daring. Mengotomatisasi perbandingan harga produk dan evaluasi tingkat kepercayaan dari berbagai marketplace melalui arsitektur scraping data efisien.
-                </p>
-                <div class="project-tech d-flex flex-wrap gap-2 mb-3">
-                  <span class="badge bg-light text-dark border">JavaScript ES6+</span>
-                  <span class="badge bg-light text-dark border">Web Scraping</span>
-                  <span class="badge bg-light text-dark border">Data Analytics</span>
-                  <span class="badge bg-light text-dark border">Bootstrap 5</span>
-                </div>
-                <div class="d-flex flex-wrap gap-2 pt-2 border-top">
-                  <!-- Trigger Modal Dialog 2 -->
-                  <button type="button" 
-                          class="btn btn-brand-primary btn-sm flex-fill" 
-                          data-bs-toggle="modal" 
-                          data-bs-target="#modalProjectKocari">
-                    <i class="bi bi-window-stack me-1" aria-hidden="true"></i> Detail Proyek &amp; Modal
-                  </button>
-                  <a href="https://github.com/boyharendy/KOCARI--Website-scraping" 
-                     target="_blank" 
-                     rel="noopener noreferrer" 
-                     class="btn btn-outline-secondary btn-sm" 
-                     aria-label="Buka repositori KOCARI di GitHub">
-                    <i class="bi bi-github me-1" aria-hidden="true"></i> GitHub &nearr;
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- KARTU PROYEK 3: Aether Weather -->
-          <div class="col">
-            <article class="card h-100 project-card shadow-sm border-0">
-              <div class="position-relative overflow-hidden project-media">
-                <img src="assets/images/project-1.jpg" 
-                     alt="Tangkapan layar Aether Weather App dengan estetika Glassmorphism" 
-                     class="card-img-top project-img" 
-                     loading="lazy"
-                     width="640"
-                     height="400">
-                <span class="badge bg-dark-subtle text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm">
-                  Interactive Weather UI
-                </span>
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <h3 class="card-title h5 fw-bold mb-2">Aether Weather — Glassmorphism App</h3>
-                <p class="card-text text-muted flex-grow-1 mb-3">
-                  Aplikasi cuaca interaktif dengan estetika Glassmorphism modern dan latar belakang dinamis yang beradaptasi dengan kondisi cuaca real-time. Menyajikan prakiraan cuaca per jam dan 5 hari ke depan secara presisi.
-                </p>
-                <div class="project-tech d-flex flex-wrap gap-2 mb-3">
-                  <span class="badge bg-light text-dark border">JavaScript / React</span>
-                  <span class="badge bg-light text-dark border">Glassmorphism CSS</span>
-                  <span class="badge bg-light text-dark border">OpenWeather API</span>
-                  <span class="badge bg-light text-dark border">WCAG 2.2 AA</span>
-                </div>
-                <div class="d-flex flex-wrap gap-2 pt-2 border-top">
-                  <!-- Trigger Modal Dialog 3 -->
-                  <button type="button" 
-                          class="btn btn-brand-primary btn-sm flex-fill" 
-                          data-bs-toggle="modal" 
-                          data-bs-target="#modalProjectAether">
-                    <i class="bi bi-window-stack me-1" aria-hidden="true"></i> Detail Proyek &amp; Modal
-                  </button>
-                  <a href="https://github.com/boyharendy/Aether-Weather" 
-                     target="_blank" 
-                     rel="noopener noreferrer" 
-                     class="btn btn-outline-secondary btn-sm" 
-                     aria-label="Buka repositori Aether Weather di GitHub">
-                    <i class="bi bi-github me-1" aria-hidden="true"></i> GitHub &nearr;
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- KARTU PROYEK 4: DEL-SIP (Proyek ke-4 Memenuhi Syarat Minimal 4 Kartu) -->
-          <div class="col">
-            <article class="card h-100 project-card shadow-sm border-0">
-              <div class="position-relative overflow-hidden project-media">
-                <img src="assets/images/project-4.jpg" 
-                     alt="Tangkapan layar sistem DEL-SIP Sistem Informasi Praktikum Institut Teknologi Del" 
-                     class="card-img-top project-img" 
-                     loading="lazy"
-                     width="640"
-                     height="400">
-                <span class="badge bg-dark-subtle text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm">
-                  Academic Portal &amp; Analytics
-                </span>
-              </div>
-              <div class="card-body d-flex flex-column p-4">
-                <h3 class="card-title h5 fw-bold mb-2">DEL-SIP — Portal Monitoring Praktikum Del</h3>
-                <p class="card-text text-muted flex-grow-1 mb-3">
-                  Sistem informasi akademik dan pemantauan penugasan praktikum terpadu untuk civitas Institut Teknologi Del. Menampilkan dasbor visualisasi progres modul lab, analitik skor tugas, dan manajemen repositori kode mahasiswa.
-                </p>
-                <div class="project-tech d-flex flex-wrap gap-2 mb-3">
-                  <span class="badge bg-light text-dark border">Bootstrap 5.3</span>
-                  <span class="badge bg-light text-dark border">PHP &amp; MySQL</span>
-                  <span class="badge bg-light text-dark border">Chart.js</span>
-                  <span class="badge bg-light text-dark border">Role-based Auth</span>
-                </div>
-                <div class="d-flex flex-wrap gap-2 pt-2 border-top">
-                  <!-- Trigger Modal Dialog 4 -->
-                  <button type="button" 
-                          class="btn btn-brand-primary btn-sm flex-fill" 
-                          data-bs-toggle="modal" 
-                          data-bs-target="#modalProjectDelsip">
-                    <i class="bi bi-window-stack me-1" aria-hidden="true"></i> Detail Proyek &amp; Modal
-                  </button>
-                  <a href="https://github.com/boyharendy" 
-                     target="_blank" 
-                     rel="noopener noreferrer" 
-                     class="btn btn-outline-secondary btn-sm" 
-                     aria-label="Lihat seluruh repositori proyek Boy Harendy di GitHub">
-                    <i class="bi bi-github me-1" aria-hidden="true"></i> GitHub &nearr;
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-
+        <!-- Grid Portofolio -->
+        <div class="row row-cols-1 row-cols-md-2 g-4 portfolio-grid" id="portfolioContainer">
+          <!-- Data diload secara asinkron melalui app.js -->
         </div>
       </div>
     </section>
 
-    <!-- --------------------------------------------------------------- -->
-    <!-- SECTION 3: RIWAYAT MATAKULIAH & PROYEK (TABEL RESPONSIVE)       -->
-    <!-- --------------------------------------------------------------- -->
+    <!-- Riwayat Section-->
     <section id="riwayat" class="section-history py-5" aria-labelledby="history-title">
       <div class="container">
         
@@ -402,7 +212,7 @@
           </p>
         </div>
 
-        <!-- Wadah Tabel Responsif Bootstrap 5 (table-responsive) -->
+        <!-- Tabel Akademik -->
         <div class="table-responsive rounded-4 shadow-sm bg-white p-3 border">
           <table class="table table-hover align-middle academic-table mb-0">
             <caption class="text-muted small px-3 pt-3">
@@ -500,9 +310,7 @@
       </div>
     </section>
 
-    <!-- --------------------------------------------------------------- -->
-    <!-- SECTION 4: FORMULIR LAYANAN & KONTAK (MODERN BOOTSTRAP 5)       -->
-    <!-- --------------------------------------------------------------- -->
+    <!-- Layanan Section-->
     <section id="layanan" class="section-services py-5" aria-labelledby="services-title">
       <div class="container">
         
@@ -517,7 +325,7 @@
         <div class="row justify-content-center">
           <div class="col-12 col-lg-9">
             
-            <!-- Formulir dengan Bootstrap 5 Client-side Validation (needs-validation) -->
+            <!-- Form Konsultasi -->
             <form class="consultation-form p-4 p-md-5 rounded-4 shadow-sm bg-white border needs-validation" 
                   id="serviceConsultationForm" 
                   novalidate>
@@ -529,7 +337,7 @@
                 </div>
               </div>
 
-              <!-- FIELDSET 1: DATA DIRI & KONTAK RESMI -->
+              <!-- Data Diri -->
               <fieldset class="mb-5">
                 <legend class="h5 fw-bold text-accent pb-2 mb-4 border-bottom d-flex align-items-center">
                   <i class="bi bi-person-badge-fill me-2" aria-hidden="true"></i> 1. Identitas Pemohon &amp; Kontak Resmi
@@ -537,7 +345,7 @@
 
                 <div class="row g-3">
                   
-                  <!-- Input Group + Floating Label 1: Nama Lengkap -->
+                  <!-- Nama -->
                   <div class="col-12 col-md-6">
                     <div class="input-group has-validation">
                       <span class="input-group-text"><i class="bi bi-person"></i></span>
@@ -557,7 +365,7 @@
                     </div>
                   </div>
 
-                  <!-- Input Group + Floating Label 2: Alamat Email -->
+                  <!-- Email -->
                   <div class="col-12 col-md-6">
                     <div class="input-group has-validation">
                       <span class="input-group-text"><i class="bi bi-envelope"></i></span>
@@ -575,7 +383,7 @@
                     </div>
                   </div>
 
-                  <!-- Input Group + Floating Label 3: Nomor Telepon / WA -->
+                  <!-- Telepon -->
                   <div class="col-12">
                     <div class="input-group has-validation">
                       <span class="input-group-text"><i class="bi bi-telephone"></i></span>
@@ -597,67 +405,25 @@
                 </div>
               </fieldset>
 
-              <!-- FIELDSET 2: SPESIFIKASI LAYANAN & KEBUTUHAN PROYEK -->
+              <!-- Kebutuhan Proyek -->
               <fieldset class="mb-4">
                 <legend class="h5 fw-bold text-accent pb-2 mb-4 border-bottom d-flex align-items-center">
                   <i class="bi bi-gear-wide-connected me-2" aria-hidden="true"></i> 2. Spesifikasi Layanan &amp; Kebutuhan Proyek
                 </legend>
 
-                <!-- Pilihan Kategori Layanan (Radio Cards) -->
+                <!-- Kategori Layanan -->
                 <div class="mb-4">
                   <label class="form-label fw-semibold mb-3 d-block">
                     Pilih Kategori Layanan yang Dibutuhkan *
                   </label>
-                  <div class="row g-3">
-                    <div class="col-12 col-md-4">
-                      <div class="form-check p-3 rounded-3 border h-100 service-radio-card">
-                        <input class="form-check-input ms-0 me-2" 
-                               type="radio" 
-                               name="kategori_layanan" 
-                               id="layanan-frontend" 
-                               value="Pengembangan Web Front-End Bootstrap &amp; Semantik" 
-                               checked 
-                               required>
-                        <label class="form-check-label fw-bold d-block" for="layanan-frontend">
-                          Front-End Bootstrap
-                          <small class="d-block fw-normal text-muted mt-1">Pembuatan halaman web profil, landing page responsif, atau UI interaktif.</small>
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                      <div class="form-check p-3 rounded-3 border h-100 service-radio-card">
-                        <input class="form-check-input ms-0 me-2" 
-                               type="radio" 
-                               name="kategori_layanan" 
-                               id="layanan-audit" 
-                               value="Audit Aksesibilitas WCAG 2.2 AA">
-                        <label class="form-check-label fw-bold d-block" for="layanan-audit">
-                          Audit Aksesibilitas Web
-                          <small class="d-block fw-normal text-muted mt-1">Pemeriksaan kontras rasio warna, navigasi keyboard, dan standar W3C.</small>
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                      <div class="form-check p-3 rounded-3 border h-100 service-radio-card">
-                        <input class="form-check-input ms-0 me-2" 
-                               type="radio" 
-                               name="kategori_layanan" 
-                               id="layanan-si" 
-                               value="Solusi Sistem Informasi &amp; Analisis Data">
-                        <label class="form-check-label fw-bold d-block" for="layanan-si">
-                          Sistem Informasi &amp; Data
-                          <small class="d-block fw-normal text-muted mt-1">Perancangan arsitektur basis data, scraping data, dan dasbor analitik.</small>
-                        </label>
-                      </div>
-                    </div>
+                  <div class="row g-3" id="servicesContainer">
+                    <!-- Data diload secara asinkron melalui app.js -->
                   </div>
                 </div>
 
                 <div class="row g-3 mb-3">
                   
-                  <!-- Select Category / Skema Kerja Sama (form-select) -->
+                  <!-- Skema Kerja -->
                   <div class="col-12 col-md-6">
                     <div class="input-group has-validation">
                       <span class="input-group-text"><i class="bi bi-clock-history"></i></span>
@@ -676,7 +442,7 @@
                     </div>
                   </div>
 
-                  <!-- Estimasi Sesi (Number) -->
+                  <!-- Estimasi Sesi -->
                   <div class="col-12 col-md-6">
                     <div class="input-group has-validation">
                       <span class="input-group-text"><i class="bi bi-hash"></i></span>
@@ -696,7 +462,7 @@
                     </div>
                   </div>
 
-                  <!-- Tanggal Target (Date) -->
+                  <!-- Target Selesai -->
                   <div class="col-12 col-md-6">
                     <div class="input-group has-validation">
                       <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
@@ -713,7 +479,7 @@
                     </div>
                   </div>
 
-                  <!-- Tautan Referensi (URL) -->
+                  <!-- Referensi -->
                   <div class="col-12 col-md-6">
                     <div class="input-group">
                       <span class="input-group-text"><i class="bi bi-link-45deg"></i></span>
@@ -728,7 +494,7 @@
                     </div>
                   </div>
 
-                  <!-- Deskripsi Bebas / Textarea (form-floating) -->
+                  <!-- Deskripsi -->
                   <div class="col-12">
                     <div class="form-floating">
                       <textarea class="form-control" 
@@ -743,7 +509,7 @@
 
                 </div>
 
-                <!-- Checkbox Syarat & Ketentuan (Wajib Centang) -->
+                <!-- Persetujuan -->
                 <div class="form-check mt-3 mb-4">
                   <input class="form-check-input" 
                          type="checkbox" 
@@ -758,7 +524,7 @@
 
               </fieldset>
 
-              <!-- Tombol Aksi Formulir: Submit & Reset -->
+              <!-- Submit Form -->
               <div class="d-flex flex-wrap gap-3 pt-3 border-top">
                 <button type="submit" class="btn btn-brand-primary btn-lg shadow-sm">
                   <i class="bi bi-send-check-fill me-2" aria-hidden="true"></i> Kirim Permohonan Layanan &rarr;
@@ -776,14 +542,12 @@
       </div>
     </section>
 
-    <!-- --------------------------------------------------------------- -->
-    <!-- SECTION 5: ASIDE (STATUS KETERSEDIAAN & METRIK REKAM JEJAK)     -->
-    <!-- --------------------------------------------------------------- -->
+    <!-- Aside Section-->
     <aside id="aside-info" class="section-aside py-5" aria-labelledby="aside-title">
       <div class="container">
         <div class="row g-4 aside-grid">
           
-          <!-- Info Ketersediaan & Badge Keahlian -->
+          <!-- Info Ketersediaan -->
           <div class="col-12 col-md-4">
             <div class="aside-card aside-status p-4 rounded-4 shadow-sm bg-white border h-100">
               <div class="card-icon-pill mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" aria-hidden="true">
@@ -801,7 +565,7 @@
             </div>
           </div>
 
-          <!-- Metrik Singkat -->
+          <!-- Metrik -->
           <div class="col-12 col-md-4">
             <div class="aside-card aside-metrics p-4 rounded-4 shadow-sm bg-white border h-100">
               <div class="card-icon-pill mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" aria-hidden="true">
@@ -825,7 +589,7 @@
             </div>
           </div>
 
-          <!-- Testimoni / Rekomendasi Mentor Singkat -->
+          <!-- Rekomendasi -->
           <div class="col-12 col-md-4">
             <div class="aside-card aside-testimonial p-4 rounded-4 shadow-sm bg-white border h-100 d-flex flex-column">
               <div class="card-icon-pill mb-3 d-inline-flex align-items-center justify-content-center rounded-circle" aria-hidden="true">
@@ -850,176 +614,35 @@
 
   </main>
 
-  <!-- ================================================================= -->
-  <!-- MODAL DIALOGS BOOTSTRAP 5 (4 MODAL UNTUK MASING-MASING PROYEK)    -->
-  <!-- ================================================================= -->
-
-  <!-- MODAL 1: KUSKAS -->
-  <div class="modal fade" id="modalProjectKuskas" tabindex="-1" aria-labelledby="modalKuskasLabel" aria-hidden="true">
+  <!-- Universal Modal-->
+  <div class="modal fade" id="universalProjectModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content rounded-4 border-0 shadow">
-        <div class="modal-header border-bottom">
-          <h1 class="modal-title h5 fw-bold d-flex align-items-center" id="modalKuskasLabel">
-            <i class="bi bi-wallet2 text-accent me-2" aria-hidden="true"></i> KUSKAS — Keuangan Sakti Kas
+        <div class="modal-header border-bottom bg-primary text-white">
+          <h1 class="modal-title h5 fw-bold d-flex align-items-center" id="projectModalTitle">
+            Judul Proyek
           </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup jendela modal"></button>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup jendela modal"></button>
         </div>
-        <div class="modal-body p-4">
-          <img src="assets/images/project-3.jpg" class="img-fluid rounded-3 mb-4 shadow-sm" alt="Banner KUSKAS">
-          <h2 class="h6 fw-bold text-accent mb-2">Latar Belakang &amp; Solusi Masalah</h2>
-          <p class="text-muted">
-            KUSKAS dirancang untuk mengatasi kebiasaan pencatatan finansial manual yang lambat dan rentan terlupakan. Melalui integrasi kecerdasan buatan Gemini AI, pengguna cukup merekam ucapan suara pengeluaran (misal: <em>"Beli bensin 50 ribu di SPBU"</em>), sistem secara otomatis mengurai nominal, kategori, dan tanggal transaksi secara real-time.
-          </p>
-          <h2 class="h6 fw-bold text-accent mb-2">Arsitektur &amp; Fitur Unggulan</h2>
-          <ul class="text-muted mb-4">
-            <li><strong>AI Voice Categorization:</strong> Pemrosesan bahasa alami untuk mendeteksi entitas belanja dan nominal.</li>
-            <li><strong>Sinkronisasi Multi-Platform:</strong> Backend Supabase Realtime menghubungkan aplikasi mobile Flutter dengan panel admin React.</li>
-            <li><strong>Otentikasi Aman:</strong> Fitur Login QR Code cepat untuk akses desktop tanpa perlu mengetik kredensial berulang.</li>
-          </ul>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="badge bg-light text-dark border">Flutter / Dart</span>
-            <span class="badge bg-light text-dark border">Laravel 11</span>
-            <span class="badge bg-light text-dark border">React.js</span>
-            <span class="badge bg-light text-dark border">Supabase</span>
-            <span class="badge bg-light text-dark border">Google Gemini AI</span>
-          </div>
+        <div class="modal-body p-4" id="projectModalBody">
+           <!-- Konten diinjeksi secara dinamis via JavaScript -->
         </div>
         <div class="modal-footer border-top">
           <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
-          <a href="https://github.com/boyharendy/Projek_Kuskas_App_Web" target="_blank" rel="noopener noreferrer" class="btn btn-brand-primary btn-sm">
-            <i class="bi bi-github me-1"></i> Buka Repositori GitHub &nearr;
+          <a href="#" id="projectModalFooterLink" target="_blank" rel="noopener noreferrer" class="btn btn-brand-primary btn-sm">
+            <i class="bi bi-github me-1"></i> Buka Referensi &nearr;
           </a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- MODAL 2: KOCARI -->
-  <div class="modal fade" id="modalProjectKocari" tabindex="-1" aria-labelledby="modalKocariLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content rounded-4 border-0 shadow">
-        <div class="modal-header border-bottom">
-          <h1 class="modal-title h5 fw-bold d-flex align-items-center" id="modalKocariLabel">
-            <i class="bi bi-shop text-accent me-2" aria-hidden="true"></i> KOCARI — E-Commerce Trust Aggregator
-          </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup jendela modal"></button>
-        </div>
-        <div class="modal-body p-4">
-          <img src="assets/images/project-2.jpg" class="img-fluid rounded-3 mb-4 shadow-sm" alt="Banner KOCARI">
-          <h2 class="h6 fw-bold text-accent mb-2">Latar Belakang &amp; Solusi Masalah</h2>
-          <p class="text-muted">
-            Konsumen daring sering kesulitan membandingkan harga asli serta membedakan penjual terpercaya dengan toko fiktif di berbagai marketplace online. KOCARI hadir sebagai mesin pencari independen yang mengumpulkan data produk sekaligus mengkalkulasi indeks skor reputasi toko secara transparan.
-          </p>
-          <h2 class="h6 fw-bold text-accent mb-2">Arsitektur &amp; Fitur Unggulan</h2>
-          <ul class="text-muted mb-4">
-            <li><strong>Automated Data Scraping:</strong> Pipeline ekstraksi harga, rating, dan riwayat transaksi secara terstruktur.</li>
-            <li><strong>Trust Scoring Algorithm:</strong> Algoritma pembobotan ulasan pelanggan dan rasio keberhasilan pesanan.</li>
-            <li><strong>Responsive Comparison Grid:</strong> Tampilan perbandingan matriks produk yang rapi di layar ponsel maupun desktop.</li>
-          </ul>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="badge bg-light text-dark border">JavaScript (ES6+)</span>
-            <span class="badge bg-light text-dark border">Node.js Web Scraping</span>
-            <span class="badge bg-light text-dark border">Bootstrap 5</span>
-            <span class="badge bg-light text-dark border">Data Normalization</span>
-          </div>
-        </div>
-        <div class="modal-footer border-top">
-          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
-          <a href="https://github.com/boyharendy/KOCARI--Website-scraping" target="_blank" rel="noopener noreferrer" class="btn btn-brand-primary btn-sm">
-            <i class="bi bi-github me-1"></i> Buka Repositori GitHub &nearr;
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL 3: Aether Weather -->
-  <div class="modal fade" id="modalProjectAether" tabindex="-1" aria-labelledby="modalAetherLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content rounded-4 border-0 shadow">
-        <div class="modal-header border-bottom">
-          <h1 class="modal-title h5 fw-bold d-flex align-items-center" id="modalAetherLabel">
-            <i class="bi bi-cloud-sun text-accent me-2" aria-hidden="true"></i> Aether Weather — Glassmorphism App
-          </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup jendela modal"></button>
-        </div>
-        <div class="modal-body p-4">
-          <img src="assets/images/project-1.jpg" class="img-fluid rounded-3 mb-4 shadow-sm" alt="Banner Aether Weather">
-          <h2 class="h6 fw-bold text-accent mb-2">Latar Belakang &amp; Solusi Masalah</h2>
-          <p class="text-muted">
-            Aether Weather menggabungkan akurasi data meteorologi dengan seni visual antarmuka modern. Dirancang dengan efek Glassmorphism bergradasi dinamis yang menyesuaikan warna suasana langit (cerah, mendung, hujan, badai) serta tetap mempertahankan rasio kontras teks agar terbaca dengan nyaman.
-          </p>
-          <h2 class="h6 fw-bold text-accent mb-2">Arsitektur &amp; Fitur Unggulan</h2>
-          <ul class="text-muted mb-4">
-            <li><strong>Adaptive Glassmorphism:</strong> Penggunaan CSS backdrop-filter dan variable tokens untuk efek visual kaca tembus pandang.</li>
-            <li><strong>OpenWeather API:</strong> Penyajian suhu, kelembaban, kecepatan angin, indeks UV, dan prakiraan 5 hari secara real-time.</li>
-            <li><strong>Aksesibilitas Digital:</strong> Kepatuhan WCAG 2.2 AA dengan mode kontras tinggi dan dukungan navigasi keyboard penuh.</li>
-          </ul>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="badge bg-light text-dark border">React.js</span>
-            <span class="badge bg-light text-dark border">Glassmorphism CSS</span>
-            <span class="badge bg-light text-dark border">OpenWeather API</span>
-            <span class="badge bg-light text-dark border">WCAG 2.2 AA</span>
-          </div>
-        </div>
-        <div class="modal-footer border-top">
-          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
-          <a href="https://github.com/boyharendy/Aether-Weather" target="_blank" rel="noopener noreferrer" class="btn btn-brand-primary btn-sm">
-            <i class="bi bi-github me-1"></i> Buka Repositori GitHub &nearr;
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL 4: DEL-SIP -->
-  <div class="modal fade" id="modalProjectDelsip" tabindex="-1" aria-labelledby="modalDelsipLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content rounded-4 border-0 shadow">
-        <div class="modal-header border-bottom">
-          <h1 class="modal-title h5 fw-bold d-flex align-items-center" id="modalDelsipLabel">
-            <i class="bi bi-mortarboard-fill text-accent me-2" aria-hidden="true"></i> DEL-SIP — Portal Monitoring Praktikum Del
-          </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup jendela modal"></button>
-        </div>
-        <div class="modal-body p-4">
-          <img src="assets/images/project-4.jpg" class="img-fluid rounded-3 mb-4 shadow-sm" alt="Banner DEL-SIP">
-          <h2 class="h6 fw-bold text-accent mb-2">Latar Belakang &amp; Solusi Masalah</h2>
-          <p class="text-muted">
-            DEL-SIP (Sistem Informasi Praktikum Del) menyederhanakan pelaporan dan evaluasi kegiatan laboratorium di lingkungan Institut Teknologi Del. Portal ini memfasilitasi asisten laboratorium dan dosen dalam melacak kelulusan modul mahasiswa secara transparan melalui dasbor analitik interaktif.
-          </p>
-          <h2 class="h6 fw-bold text-accent mb-2">Arsitektur &amp; Fitur Unggulan</h2>
-          <ul class="text-muted mb-4">
-            <li><strong>Interactive Analytics Dashboard:</strong> Visualisasi grafik ketercapaian modul lab per minggu menggunakan Chart.js.</li>
-            <li><strong>Sistem Grid Multi-Perangkat:</strong> Menggunakan fondasi Bootstrap 5.3 yang responsif untuk asisten lab mobile &amp; desktop.</li>
-            <li><strong>Manajemen Berkas Tugas:</strong> Otomasi verifikasi format berkas zip/pdf dan validasi tenggat waktu praktikum.</li>
-          </ul>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="badge bg-light text-dark border">Bootstrap 5.3</span>
-            <span class="badge bg-light text-dark border">PHP 8.2</span>
-            <span class="badge bg-light text-dark border">MySQL Relational</span>
-            <span class="badge bg-light text-dark border">Chart.js</span>
-            <span class="badge bg-light text-dark border">RBAC Security</span>
-          </div>
-        </div>
-        <div class="modal-footer border-top">
-          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Tutup</button>
-          <a href="https://github.com/boyharendy" target="_blank" rel="noopener noreferrer" class="btn btn-brand-primary btn-sm">
-            <i class="bi bi-github me-1"></i> Buka Profil GitHub &nearr;
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================================================================= -->
-  <!-- FOOTER (KONTAK RESMI, HAK CIPTA & TAUTAN KEMBALI KE ATAS)         -->
-  <!-- ================================================================= -->
+  <!-- Footer-->
   <footer class="site-footer py-5" id="kontak">
     <div class="container">
       <div class="row g-4 footer-content">
         
-        <!-- Kolom 1: Identitas & Deskripsi Repositori -->
+        <!-- Identitas Footer -->
         <div class="col-12 col-md-4 footer-col">
           <span class="footer-logo d-block h4 fw-bold mb-3">Boy<strong>Harendy</strong></span>
           <p class="footer-desc mb-3">
@@ -1030,7 +653,7 @@
           </p>
         </div>
 
-        <!-- Kolom 2: Kontak Resmi Mahasiswa (Menggunakan Elemen Semantik Address) -->
+        <!-- Kontak Footer -->
         <div class="col-12 col-md-4 footer-col">
           <h2 class="footer-heading h5 fw-bold mb-3">Kontak Resmi Mahasiswa</h2>
           <address class="footer-address not-italic mb-0">
@@ -1051,7 +674,7 @@
           </address>
         </div>
 
-        <!-- Kolom 3: Tautan Sosial & Navigasi Cepat -->
+        <!-- Tautan Footer -->
         <div class="col-12 col-md-4 footer-col">
           <h2 class="footer-heading h5 fw-bold mb-3">Tautan &amp; Jejaring Profesional</h2>
           <ul class="footer-links-list list-unstyled d-flex flex-column gap-2 mb-0">
@@ -1066,7 +689,7 @@
 
       </div>
 
-      <!-- Garis Pemisah & Baris Bawah Footer -->
+      <!-- Copyright -->
       <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center pt-4 mt-4 border-top">
         <p class="copyright-text small mb-0">
           &copy; 2026 Boy Harendy Simamora. Hak Cipta Dilindungi. Tugas Praktikum Pemrograman Web Minggu 3 (Bootstrap 5).
@@ -1078,40 +701,11 @@
     </div>
   </footer>
 
-  <!-- ================================================================= -->
-  <!-- SCRIPTS: BOOTSTRAP 5.3.3 BUNDLE JS & FORM VALIDATION SCRIPT       -->
-  <!-- ================================================================= -->
+  <!-- Vendor Scripts-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-  <!-- Skrip Standard Validasi Formulir Bootstrap 5 -->
-  <script>
-    (() => {
-      'use strict';
-      const forms = document.querySelectorAll('.needs-validation');
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          } else {
-            event.preventDefault();
-            alert('Terima kasih! Permohonan konsultasi Anda berhasil tervalidasi dan siap dikirim.');
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-
-      // Tombol reset menghapus class validasi
-      const btnReset = document.getElementById('btnResetForm');
-      if (btnReset) {
-        btnReset.addEventListener('click', () => {
-          const form = document.getElementById('serviceConsultationForm');
-          if (form) {
-            form.classList.remove('was-validated');
-          }
-        });
-      }
-    })();
-  </script>
+  <!-- Scripts JavaScript -->
+  <script src="js/api-service.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
