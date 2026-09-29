@@ -1,0 +1,38 @@
+[
+  {
+    "id": "project-kuskas",
+    "title": "KUSKAS — Keuangan Sakti Kas",
+    "category": "Web & Mobile Ecosystem",
+    "thumbnail": "assets/images/project-3.jpg",
+    "description": "Ekosistem pencatatan keuangan pribadi cerdas berbasis aplikasi Android dan web admin panel. Menggunakan voice recording dengan kategorisasi otomatis Gemini AI, otentikasi QR Code, dan sinkronisasi real-time Supabase.",
+    "tags": ["Flutter & Dart", "Laravel & React", "Supabase", "Gemini AI"],
+    "link": "https://github.com/boyharendy/Projek_Kuskas_App_Web"
+  },
+  {
+    "id": "project-kocari",
+    "title": "KOCARI — E-Commerce Trust Aggregator",
+    "category": "Data Scraping & E-Commerce",
+    "thumbnail": "assets/images/project-2.jpg",
+    "description": "Platform mesin pencari cerdas dan agregator reputasi penjual daring. Mengotomatisasi perbandingan harga produk dan evaluasi tingkat kepercayaan dari berbagai marketplace melalui arsitektur scraping data efisien.",
+    "tags": ["JavaScript ES6+", "Web Scraping", "Data Analytics", "Bootstrap 5"],
+    "link": "https://github.com/boyharendy/KOCARI--Website-scraping"
+  },
+  {
+    "id": "project-aether",
+    "title": "Aether Weather — Glassmorphism App",
+    "category": "Interactive Weather UI",
+    "thumbnail": "assets/images/project-1.jpg",
+    "description": "Aplikasi cuaca interaktif dengan estetika Glassmorphism modern dan latar belakang dinamis yang beradaptasi dengan kondisi cuaca real-time. Menyajikan prakiraan cuaca per jam dan 5 hari ke depan secara presisi.",
+    "tags": ["JavaScript / React", "Glassmorphism CSS", "OpenWeather API", "WCAG 2.2 AA"],
+    "link": "https://github.com/boyharendy/Aether-Weather"
+  },
+  {
+    "id": "project-delsip",
+    "title": "DEL-SIP — Portal Monitoring Praktikum Del",
+    "category": "Academic Portal & Analytics",
+    "thumbnail": "assets/images/project-4.jpg",
+    "description": "Sistem informasi akademik dan pemantauan penugasan praktikum terpadu untuk civitas Institut Teknologi Del. Menampilkan dasbor visualisasi progres modul lab, analitik skor tugas, dan manajemen repositori kode mahasiswa.",
+    "tags": ["Bootstrap 5.3", "PHP & MySQL", "Chart.js", "Role-based Auth"],
+    "link": "https://github.com/boyharendy"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "layanan-frontend",
+    "value": "Pengembangan Web Front-End Bootstrap & Semantik",
+    "label": "Front-End Bootstrap",
+    "description": "Pembuatan halaman web profil, landing page responsif, atau UI interaktif."
+  },
+  {
+    "id": "layanan-audit",
+    "value": "Audit Aksesibilitas WCAG 2.2 AA",
+    "label": "Audit Aksesibilitas Web",
+    "description": "Pemeriksaan kontras rasio warna, navigasi keyboard, dan standar W3C."
+  },
+  {
+    "id": "layanan-si",
+    "value": "Solusi Sistem Informasi & Analisis Data",
+    "label": "Sistem Informasi & Data",
+    "description": "Perancangan arsitektur basis data, scraping data, dan dasbor analitik."
+  }
+]
