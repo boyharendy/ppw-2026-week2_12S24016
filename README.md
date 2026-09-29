@@ -1,108 +1,76 @@
-# PPW Portofolio Project — Boy Harendy Simamora
-### Refactoring Berbasis Bootstrap 5 & Advanced Custom CSS (Tugas Praktikum Minggu 03)
+# Portofolio Pribadi & Sistem Layanan (Decoupled Architecture)
 
-Website portofolio pribadi dan portal layanan interaktif **Boy Harendy Simamora** (Mahasiswa S1 Sistem Informasi Institut Teknologi Del). Proyek ini merupakan kelanjutan dan pemutakhiran (*refactoring*) menyeluruh dari Tugas Minggu 2, kini mengadopsi standar **Bootstrap 5.3+ CDN**, arsitektur grid responsif 12-kolom, dialog modal interaktif, formulir modern dengan *Floating Labels*, dan kustomisasi variabel CSS tingkat lanjut tanpa mengorbankan integritas semantik **HTML5** dan standar aksesibilitas **WCAG 2.2 AA**.
+Repositori ini berisi tugas mandiri praktikum **Pemrograman dan Pengujian Web (PPW) Minggu ke-4**. Proyek ini merupakan kelanjutan dari hasil kerja pada praktikum Minggu ke-3, di mana arsitektur web yang sebelumnya bersifat monolitik statis telah ditransformasi menjadi arsitektur kontemporer *Decoupled Multi-Tier* menggunakan pendekatan **Dynamic Client-Side Rendering (CSR)**.
 
-🌐 **Live Demo GitHub Pages:** [https://boyharendy.github.io/PPW-Portofolio-Project/](https://boyharendy.github.io/PPW-Portofolio-Project/)  
-📦 **Branch Khusus Minggu 3:** `week3-bootstrap`
+## 🔗 Tautan Live Deployment (GitHub Pages)
 
----
-
-## 👤 Identitas Mahasiswa
-
-| Keterangan | Informasi Resmi |
-| :--- | :--- |
-| **Nama Lengkap** | Boy Harendy Simamora |
-| **NIM** | 12S24016 |
-| **Program Studi** | S1 Sistem Informasi |
-| **Fakultas** | Informatika dan Teknik Elektro (FITE) |
-| **Institusi** | Institut Teknologi Del |
-| **Mata Kuliah** | Pemrograman dan Pengujian Web (12S3101) |
-| **Tahun Akademik** | Semester Ganjil 2026/2027 |
+**Tautan Akses:** [https://boyharendy.github.io/ppw-2026-week2_12S24016/](https://boyharendy.github.io/ppw-2026-week2_12S24016/)
 
 ---
 
-## 📊 Tabel Komparasi: Sebelum vs Sesudah Integrasi Framework
+## 🏗️ Arsitektur Sistem C4 (Container Model)
 
-Sesuai spesifikasi teknis penugasan Modul 3, berikut adalah perbandingan komparatif arsitektur antarmuka dan basis kode antara **Minggu 2** (Pure Semantic HTML5 & CSS3) dengan **Minggu 3** (Bootstrap 5.3 + Advanced Custom Overrides):
+Berikut adalah pemodelan arsitektur aplikasi ini yang menunjukkan pemisahan (*Separation of Concerns*) antara *Presentation Tier* (Klien), *Static Hosting*, dan *Data Providers*.
 
-| Aspek / Komponen | Minggu 2 (Sebelum Refactoring) | Minggu 3 (Sesudah Integrasi Bootstrap 5) |
+```mermaid
+C4Container
+    title Container Diagram for Personal Portfolio Web Application
+
+    Person(user, "Pengunjung / Klien", "Mengakses portofolio, melihat karya, dan mengirimkan formulir permohonan layanan.")
+
+    System_Boundary(c1, "Decoupled Web Architecture") {
+        Container(browser, "Web Browser (Client-Side)", "HTML5, CSS3, JS (ES6+)", "Merender UI secara dinamis (CSR) dan mengelola status antarmuka.")
+        
+        Container(static_server, "GitHub Pages CDN", "Static Hosting", "Menyajikan shell index.html awal, stylesheet (CSS), dan berkas statis (Gambar).")
+        
+        Container(json_provider, "JSON Data Layer", "JSON Files", "Bertindak sebagai decoupled mock RESTful data layer (projects.json, services.json, profile.json).")
+    }
+    
+    Rel(user, browser, "Berinteraksi dengan", "HTTPS")
+    Rel(browser, static_server, "Meminta HTML/CSS/Assets", "GET /")
+    Rel(browser, json_provider, "Mengambil data via Fetch API asinkron", "GET /data/*.json")
+```
+
+### Analisis Pemisahan Minat (*Separation of Concerns*)
+Peralihan dari arsitektur monolitik statis ke *decoupled* memisahkan tanggung jawab sistem menjadi beberapa *tier* terisolasi:
+1. **Presentation Tier (Browser/Client):** Diatur oleh `app.js`, HTML shell, dan CSS. Bertanggung jawab murni pada presentasi, manipulasi DOM, dan pengelolaan UI States (Loading, Error, Success).
+2. **Service / API Logic Tier:** Diatur oleh `api-service.js` yang menyimulasikan gerbang (gateway) asinkron untuk mengambil data maupun mem-post formulir.
+3. **Data Layer (JSON Providers):** Data *hardcoded* dicabut dan dipindahkan ke JSON murni, membuat komponen data sepenuhnya terpisah dari tampilan. Jika ke depannya digunakan REST API asli dari *backend server* (misal: Node.js/PHP), UI klien tidak perlu banyak berubah.
+
+---
+
+## ⚖️ Komparasi: Sebelum vs Sesudah Refactoring
+
+| Aspek Komparasi | Sebelum (Minggu 3: Monolitik Statis) | Sesudah (Minggu 4: Decoupled CSR) |
 | :--- | :--- | :--- |
-| **Pondasi & Framework** | Pure Vanilla CSS murni tanpa dependensi eksternal. | **Bootstrap 5.3.3 CDN** (CSS & JS bundle) + **Bootstrap Icons 1.11.3 CDN**. |
-| **Arsitektur Urutan CSS** | 1 berkas `style.css` independen. | `style.css` dimuat **setelah** Bootstrap CSS untuk *custom overrides* yang elegan sesuai algoritma cascading. |
-| **Navigasi (Navbar)** | Flexbox custom statis di mobile; menu link membentang langsung. | **Responsive Navbar Bootstrap** (`sticky-top`) dengan tombol hamburger collapse (`navbar-toggler`) yang berfungsi mulus di layar ponsel tanpa error console. |
-| **Tata Letak Hero Section** | CSS Flexbox manual dengan media queries kustom. | **Bootstrap 12-Column Grid** (`row`, `col-12`, `col-lg-7`, `col-lg-5`) responsif multi-perangkat. |
-| **Galeri Portofolio** | 3 kartu proyek menggunakan CSS Grid murni. | **Minimal 4 kartu proyek** (`.card.h-100`) dalam grid responsif (`row-cols-1 row-cols-md-2 g-4`), ditambah proyek baru: **DEL-SIP Portal Monitoring Praktikum**. |
-| **Interaktivitas Detail Proyek** | Tautan eksternal biasa tanpa popup. | **Bootstrap Modal Dialog (`.modal.fade`)** interaktif di setiap kartu (4 modal unik berisi latar belakang, arsitektur, dan fitur proyek). |
-| **Formulir Layanan** | Form HTML5 native dengan label dan input standar. | Modernisasi komponen Bootstrap: **Floating Labels** (`.form-floating`), **Input Groups** berikon, dropdown select kustom, dan checkbox S&K. |
-| **Validasi Formulir** | Validasi bawaan peramban (*browser default tooltip*). | **Validasi Visual Interaktif Bootstrap 5** (`needs-validation`, `.valid-feedback`, `.invalid-feedback`) dengan skrip JavaScript terkontrol. |
-| **Pengelolaan Tema & Variabel** | Variabel CSS terbatas pada `:root`. | **$\ge 6$ CSS Variables terstruktur** pada `:root` (`--brand-primary`, `--brand-hover`, `--brand-accent`, `--card-radius`, `--shadow-lift`, dll.) dengan palet khas *Deep Teal & Slate*. |
-| **Mikro-Interaksi Kartu** | Transformasi translateY standar. | **Lab 1 Micro-interaction**: Garis aksen animasi pseudo-element `::before` (`scaleX(0)` $\rightarrow$ `scaleX(1)`) dikombinasikan dengan elevasi `box-shadow`. |
-| **Kepatuhan Aturan CSS** | Tanpa aturan spesifisitas ketat. | **Zero arbitrary `!important`**; seluruh override framework ditangani melalui selektor spesifisitas yang terencana. |
+| **Penyimpanan Data** | Tergabung (*hardcoded*) di dalam file HTML. | Terpisah di dalam direktori `/data` sebagai file JSON. |
+| **Rendering Konten** | *Server-Side* statis (dikirim utuh dari server). | *Client-Side Rendering (CSR)* dimuat asinkron menggunakan JS. |
+| **Elemen Modal** | Duplikasi puluhan baris kode HTML untuk setiap *modal* proyek. | **Hanya 1 (satu)** *Universal Dynamic Modal*, data diinjeksi via JS. |
+| **Pengiriman Form** | *Full page reload* (sinkron). | AJAX / Fetch Asinkron tanpa memuat ulang halaman (*No reload*). |
+| **Feedback Pengguna** | Bawaan peramban atau *alert* standar. | Visual Toast Bootstrap 5 dinamis dan status *spinner* memuat. |
+| **Manajemen Status** | Tidak ada persistensi riwayat lokal. | Menyimpan data pemesanan secara persisten di `localStorage`. |
 
 ---
 
-## 📸 Dokumentasi Antarmuka (Screenshots)
+## ⚡ Pengukuran Performa Jaringan (Network Profiling DevTools)
 
-### 1. Desktop View (Hero & Responsive Sticky Navbar)
-![Desktop View Hero](assets/images/project-1.jpg)
+Tabel berikut menunjukkan hasil pengujian profil jaringan (Network tab) menggunakan peramban DevTools (kondisi: Disable Cache vs caching aktif).
 
-### 2. Grid Portofolio Responsif & Modal Dialog Detail
-![Portfolio Grid](assets/images/project-4.jpg)
+| Metrik Jaringan | Cold Load (Disable Cache / Cache Kosong) | Warm Load (Cache Tersimpan) |
+| :--- | :--- | :--- |
+| **Status HTTP File Statis** | `200 OK` (Mengunduh seluruh berkas) | `304 Not Modified` atau `(from memory/disk cache)` |
+| **Waktu Pemuatan (Load Time)** | [Isi ms/s, contoh: ~850 ms] | [Isi ms/s, contoh: ~150 ms] |
+| **Total Payload Data Transfer** | [Isi MB/KB, contoh: 2.1 MB] | [Isi MB/KB, contoh: ~25 KB] |
+| **Time to First Byte (TTFB)** | [Isi ms, contoh: 45 ms] | [Isi ms, contoh: 2 ms] |
 
-### 3. Formulir Layanan Modern (Floating Labels & Input Groups)
-![Formulir Modern](assets/images/project-2.jpg)
+### Analisis HTTP 304 Not Modified & Caching
+Pada kondisi *Warm Load*, server (GitHub Pages) tidak perlu mengirim ulang seluruh isi berkas statis (seperti gambar dan pustaka CSS). Server cukup mengirimkan status **`304 Not Modified`** karena sidik jari berkas (`ETag`) di peramban klien masih sama dengan yang ada di server. Hal ini secara drastis menghemat pemakaian *bandwidth* dan mempercepat *rendering*.
 
----
+### 📷 Screenshot Diagram Waterfall DevTools
+*Silakan ganti/tambahkan gambar screenshot Waterfall peramban DevTools Anda di bawah ini:*
 
-## 🛠️ Pustaka & Teknologi yang Digunakan
-
-1. **Bootstrap 5.3.3 (CDN):** Sistem grid 12-kolom responsif, Flexbox utilities, Card components, Modal dialog, dan Floating form controls.
-2. **Bootstrap Icons 1.11.3 (CDN):** Ikonografi vektor SVG untuk input fields, status badges, dan tombol navigasi.
-3. **HTML5 Semantik:** Struktur dokumen tetap menggunakan elemen semantik standar (`header`, `nav`, `main`, `section`, `article`, `figure`, `dl`, `aside`, `footer`, `address`).
-4. **Advanced Custom CSS Overrides:** Variabel global `:root`, animasi pseudo-elements `::before`, glassmorphism backdrop filter, dan harmonisasi warna brand.
-5. **Google Fonts (Plus Jakarta Sans):** Tipografi sans-serif modern yang nyaman dibaca.
-6. **Aksesibilitas (WCAG 2.2 Level AA):** Kontras rasio warna tinggi, skip link, navigasi keyboard penuh, dan fokus outline terlihat.
-7. **Git & GitHub Pages:** Branching `PPW-2026-Week3_12S24016` dan hosting otomatis.
+![Screenshot Waterfall DevTools](assets/images/waterfall-placeholder.png) 
+*(Ganti gambar ini dengan tangkapan layar asli Anda dan hapus tulisan ini)*
 
 ---
-
-## 📂 Struktur Direktori Proyek
-
-```
-ppw-2026-week2_12S24016/
-├── index.html                           # Halaman utama portofolio (Bootstrap 5.3 + Semantik)
-├── style.css                            # Stylesheet kustom (CSS Variables & Overrides)
-├── README.md                            # Dokumentasi komprehensif & tabel komparasi
-├── .gitignore                           # Konfigurasi Git ignore
-└── assets/
-    └── images/
-        ├── profile.jpg                  # Foto potret resmi mahasiswa
-        ├── project-1.jpg                # Screenshot proyek Aether Weather
-        ├── project-2.jpg                # Screenshot proyek KOCARI Aggregator
-        ├── project-3.jpg                # Screenshot proyek KUSKAS Financial App
-        └── project-4.jpg                # Screenshot proyek DEL-SIP Academic Portal (Proyek ke-4)
-```
-
----
-
-## 🚀 Panduan Menjalankan Secara Lokal
-
-1. Buka terminal dan masuk ke repositori proyek:
-   ```bash
-   cd "e:\TUGAS\SEMESTER 5\PPW\PPW P\Prak 2\portofolio"
-   ```
-2. Pastikan berada di branch `PPW-2026-Week3_12S24016`:
-   ```bash
-   git status
-   ```
-3. Buka berkas `index.html` menggunakan browser modern (Google Chrome, Microsoft Edge, Firefox) atau jalankan ekstensi **Live Server** pada Visual Studio Code.
-4. Lakukan pengujian responsivitas melalui browser DevTools (`Ctrl + Shift + I` $\rightarrow$ Toggle Device Toolbar / `Ctrl + Shift + M`).
-
----
-
-## 📝 Lisensi & Integritas Akademik
-
-© 2026 **Boy Harendy Simamora** (NIM: 12S24016).  
-Program Studi S1 Sistem Informasi — Fakultas Informatika dan Teknik Elektro, Institut Teknologi Del.  
-Tugas Mandiri Praktikum Pemrograman dan Pengujian Web (PPW 2026).
+*Dikerjakan untuk memenuhi capaian pembelajaran Praktikum Pemrograman Web (PPW).*
