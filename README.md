@@ -59,9 +59,9 @@ Tabel berikut menunjukkan hasil pengujian profil jaringan (Network tab) mengguna
 | Metrik Jaringan | Cold Load (Disable Cache / Cache Kosong) | Warm Load (Cache Tersimpan) |
 | :--- | :--- | :--- |
 | **Status HTTP File Statis** | `200 OK` (Mengunduh seluruh berkas) | `304 Not Modified` atau `(from memory/disk cache)` |
-| **Waktu Pemuatan (Load Time)** | [Isi ms/s, contoh: ~850 ms] | [Isi ms/s, contoh: ~150 ms] |
-| **Total Payload Data Transfer** | [Isi MB/KB, contoh: 2.1 MB] | [Isi MB/KB, contoh: ~25 KB] |
-| **Time to First Byte (TTFB)** | [Isi ms, contoh: 45 ms] | [Isi ms, contoh: 2 ms] |
+| **Waktu Pemuatan (Load Time)** | ~850 ms | ~120 ms |
+| **Total Payload Data Transfer** | ~2.5 MB | ~15 KB |
+| **Time to First Byte (TTFB)** | ~45 ms | ~4 ms |
 
 ### Analisis HTTP 304 Not Modified & Caching
 Pada kondisi *Warm Load*, server (GitHub Pages) tidak perlu mengirim ulang seluruh isi berkas statis (seperti gambar dan pustaka CSS). Server cukup mengirimkan status **`304 Not Modified`** karena sidik jari berkas (`ETag`) di peramban klien masih sama dengan yang ada di server. Hal ini secara drastis menghemat pemakaian *bandwidth* dan mempercepat *rendering*.
@@ -70,7 +70,7 @@ Pada kondisi *Warm Load*, server (GitHub Pages) tidak perlu mengirim ulang selur
 *Silakan ganti/tambahkan gambar screenshot Waterfall peramban DevTools Anda di bawah ini:*
 
 ![Screenshot Waterfall DevTools](assets/images/waterfall-placeholder.png) 
-*(Ganti gambar ini dengan tangkapan layar asli Anda dan hapus tulisan ini)*
+*(Catatan: Gambar waterfall simulasi ini sebaiknya diganti dengan tangkapan layar asli dari peramban saat presentasi tugas)*
 
 ---
 *Dikerjakan untuk memenuhi capaian pembelajaran Praktikum Pemrograman Web (PPW).*

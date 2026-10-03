@@ -5,11 +5,13 @@ class App {
       projects: [],
       services: [],
       profile: null,
+      activeCategory: 'All',
       orders: JSON.parse(localStorage.getItem('user_orders') || '[]')
     };
 
     this.ui = {
       portfolioContainer: document.getElementById('portfolioContainer'),
+      portfolioFilterContainer: document.getElementById('portfolioFilterContainer'),
       servicesContainer: document.getElementById('servicesContainer'),
       orderBadge: document.getElementById('orderBadge'),
       form: document.getElementById('serviceConsultationForm'),
@@ -87,6 +89,7 @@ class App {
       this.state.services = services;
       this.state.profile = profile;
 
+      this.renderPortfolioFilters();
       this.renderProjects();
       this.renderServices();
       this.renderProfile();
@@ -103,20 +106,25 @@ class App {
     const container = this.ui.portfolioContainer;
     if (!container) return;
     
-    if (this.state.projects.length === 0) {
+    let displayedProjects = this.state.projects;
+    if (this.state.activeCategory !== 'All') {
+      displayedProjects = this.state.projects.filter(p => p.category === this.state.activeCategory);
+    }
+    
+    if (displayedProjects.length === 0) {
       this.renderState(container, 'empty');
       return;
     }
 
     container.innerHTML = '';
-    this.state.projects.forEach(proj => {
+    displayedProjects.forEach(proj => {
       // Tags render
       const tagsHtml = (proj.tags || []).map(tag => 
         `<span class="badge bg-light text-dark border">${this.escapeHTML(tag)}</span>`
       ).join('');
 
       const html = `
-        <div class="col">
+        <div class="col animation-fade-in-up">
           <article class="card h-100 project-card shadow-sm border-0">
             <div class="position-relative overflow-hidden project-media">
               <img src="${this.escapeHTML(proj.thumbnail)}" 
@@ -153,6 +161,26 @@ class App {
         </div>
       `;
       container.insertAdjacentHTML('beforeend', html);
+    });
+  }
+
+  renderPortfolioFilters() {
+    const container = this.ui.portfolioFilterContainer;
+    if (!container || this.state.projects.length === 0) return;
+
+    const categories = ['All', ...new Set(this.state.projects.map(p => p.category))];
+    
+    container.innerHTML = '';
+    categories.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = `btn rounded-pill px-4 shadow-sm ${this.state.activeCategory === cat ? 'btn-brand-primary' : 'btn-outline-secondary bg-white'}`;
+      btn.textContent = cat;
+      btn.onclick = () => {
+        this.state.activeCategory = cat;
+        this.renderPortfolioFilters(); // re-render to update active state
+        this.renderProjects(); // re-render projects list
+      };
+      container.appendChild(btn);
     });
   }
 
